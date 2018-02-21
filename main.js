@@ -74,6 +74,7 @@ function changePlayer(){
 }
 
 //version 1.0
+//version 2.0
 
 function showFauxToken(){
     var currentHoveredClass = $(this).attr('class');
