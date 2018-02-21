@@ -35,14 +35,15 @@ function locationUpdate(that){
 
     var classes = $(that).attr('class');
     var column = classes.charAt(6);
-    var row = classes.charAt(11)
+    var row = classes.charAt(11);
     var currentPlayer = playerTurn;
 
     console.log('column: ' + column);
     console.log('row: ' + row);
     console.log('current player: ' + currentPlayer);
      updateBoardArray(row, column, currentPlayer);
-
+     createToken(column);
+     moveToken(row, column);
 }
 
 class Player{

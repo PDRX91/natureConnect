@@ -102,3 +102,12 @@ body{
     background-color: lightcyan;
     border: 1px solid black;
 }
+.tokenActive{
+    height: 100%;
+    position:relative;
+    transform:translateX(25%);
+}
+.fauxToken{
+    height:100%;
+    transform:translateX(25%);
+}
