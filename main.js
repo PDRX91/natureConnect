@@ -22,7 +22,7 @@ function getLocation(){
     var column = classes.charAt(6);
     var row = classes.charAt(11)
     var currentPlayer = playerTurn;
-    updateBoardArray(row, column, currentPlayer);
+   // updateBoardArray(row, column, currentPlayer);
 }
 
 class Player{
@@ -31,3 +31,4 @@ class Player{
     }
     
 }
+
