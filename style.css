@@ -1,12 +1,14 @@
 html{
     font-size: 2.5vmin;
 }
-
 body{
     width:100vw;
     height:100vh;
     font-size:0;
     margin:0;
+}
+*{
+    box-sizing:border-box;
 }
 
 .mainPage{
@@ -73,21 +75,17 @@ body{
 .tokenHoverContainer > div{
     width: 14%;
     height: 100%;
-    /* background-color: pink; */
-    /* border: 1px solid black; */
     display: inline-flex;
     justify-content: center;
 }
 
 .tokenHoverContainer  img{
     height: 100%;
-    display: none;
 }
-
-/* .tokenHoverContainer img:hover{
-    display:inline-block;
-} */
-
+.faux{
+    display:none;
+    height:100%;
+}
 .gameboard{
     width: 80%;
     height:70%;
@@ -97,15 +95,18 @@ body{
 }
 
 .gameboard > div{
-    width: 14.28%;
+    width: 14.2857%;
     height: 15.5%;
     background-color: lightcyan;
     border: 1px solid black;
-    box-sizing: border-box;
+
 }
-.tokenActive{
-    height: 100%;
-    position:relative;
+.tokenActive {
+    position:absolute;
+    /*height:;*/
+    width:50px;
+    height:50px !important;
+    /*z-index:100;*/
     transform:translateX(25%);
 }
 .fauxToken{
