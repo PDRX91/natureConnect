@@ -56,4 +56,5 @@ function checkWinCondition(row, column){
     else{
         console.log('not a win');
     }
+    changePlayer();
 }
