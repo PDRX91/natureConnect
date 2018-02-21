@@ -10,7 +10,7 @@ function initializeApp(){
 
 function clickHandler(){
     $('.gameboard > div').click(processClick);
-    $(".gameboard > div").hover(showFauxToken);
+    $(".gameboard > div").hover(showFauxToken, hideFauxToken);
 }
 
 function processClick(){
@@ -67,6 +67,14 @@ function showFauxToken(){
     var currentHoveredClass = $(this).attr('class');
     var currentColumn = currentHoveredClass.substr(0,7);
     var hoverSelector = ".tokenHoverContainer ." + currentColumn + " img"
-    $(hoverSelector).css('display', 'normal');
+    $(hoverSelector).css('display', 'inline-block');
     console.log("I should be showing now");
+}
+
+function hideFauxToken(){
+    var currentHoveredClass = $(this).attr('class');
+    var currentColumn = currentHoveredClass.substr(0,7);
+    var hoverSelector = ".tokenHoverContainer ." + currentColumn + " img"
+    $(hoverSelector).css('display', 'none');
+    console.log("I should be hidden now");
 }
