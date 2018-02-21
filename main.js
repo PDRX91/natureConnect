@@ -60,3 +60,5 @@ function changePlayer(){
     }
     console.log('we changed player and player is', playerTurn);
 }
+
+//version 1.0
