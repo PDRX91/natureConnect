@@ -67,14 +67,26 @@ body{
     margin: auto;
     display: flex;
     flex-flow: column wrap;
+    padding-top: 1%;
 }
+
 .tokenHoverContainer > div{
     width: 14%;
     height: 100%;
-    background-color: pink;
-    border: 1px solid black;
-    display: inline-block;
+    /* background-color: pink; */
+    /* border: 1px solid black; */
+    display: inline-flex;
+    justify-content: center;
 }
+
+.tokenHoverContainer  img{
+    height: 100%;
+    display: none;
+}
+
+/* .tokenHoverContainer img:hover{
+    display:inline-block;
+} */
 
 .gameboard{
     width: 80%;

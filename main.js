@@ -10,6 +10,7 @@ function initializeApp(){
 
 function clickHandler(){
     $('.gameboard > div').click(processClick);
+    $(".gameboard > div").hover(showFauxToken);
 }
 
 function processClick(){
@@ -19,9 +20,8 @@ function processClick(){
     updateBoardSquare(that);
     locationUpdate(that);
     // update board square visual
-
-
 }
+
 function updateBoardSquare(that){
 
     if(playerTurn === 1){
@@ -62,3 +62,11 @@ function changePlayer(){
 }
 
 //version 1.0
+
+function showFauxToken(){
+    var currentHoveredClass = $(this).attr('class');
+    var currentColumn = currentHoveredClass.substr(0,7);
+    var hoverSelector = ".tokenHoverContainer ." + currentColumn + " img"
+    $(hoverSelector).css('display', 'normal');
+    console.log("I should be showing now");
+}
