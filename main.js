@@ -41,9 +41,9 @@ function locationUpdate(that){
     console.log('column: ' + column);
     console.log('row: ' + row);
     console.log('current player: ' + currentPlayer);
-     updateBoardArray(row, column, currentPlayer);
-     createToken(column);
-     moveToken(row, column);
+    var placementRow = updateBoardArray(row, column, currentPlayer);
+     createToken(column, currentPlayer);
+     moveToken(placementRow, column);
 }
 
 class Player{
@@ -67,15 +67,13 @@ function changePlayer(){
 function showFauxToken(){
     var currentHoveredClass = $(this).attr('class');
     var currentColumn = currentHoveredClass.substr(0,7);
-    var hoverSelector = ".tokenHoverContainer ." + currentColumn + " img"
+    var hoverSelector = "." + currentColumn + " img.faux"
     $(hoverSelector).css('display', 'inline-block');
-    console.log("I should be showing now");
 }
 
 function hideFauxToken(){
     var currentHoveredClass = $(this).attr('class');
     var currentColumn = currentHoveredClass.substr(0,7);
-    var hoverSelector = ".tokenHoverContainer ." + currentColumn + " img"
+    var hoverSelector = "." + currentColumn + " img.faux"
     $(hoverSelector).css('display', 'none');
-    console.log("I should be hidden now");
 }
