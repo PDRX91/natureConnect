@@ -62,9 +62,18 @@ body{
 }
 
 .tokenHoverContainer{
-    width:80%;
+    width: 80%;
     height: 10%;
     margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+.tokenHoverContainer > div{
+    width: 14%;
+    height: 100%;
+    background-color: pink;
+    border: 1px solid black;
+    display: inline-block;
 }
 
 .gameboard{
