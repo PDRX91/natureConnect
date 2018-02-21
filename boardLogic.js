@@ -24,14 +24,18 @@ function updateBoardArray(row, column, currentPlayer){
         }
     }
 }
-function checkWinCondition(row, column){
+function checkWinCondition(row, column, currentPlayer){
     console.log('checking win at row', row, ' column', column);
     //check horizontal
     var won = true;
+    var playerWin = currentPlayer.toString() +
+                    currentPlayer +
+                    currentPlayer +
+                    currentPlayer;
     var testString = 'row:';
     var diagStringUpward = ' UpwardDiagonal:';
     var diagStringDownward = ' DownwardDiagonal:';
-    var upwardDiagonal = row + column;
+    var upwardDiagonal = parseInt(row) + parseInt(column);
     var downwardDiagonal = row - column;
     for(var i = 0; i < boardArray[row].length; i++){
         testString += boardArray[row][i];
@@ -53,8 +57,8 @@ function checkWinCondition(row, column){
     }
     testString += diagStringUpward + diagStringDownward;
     console.log('array', boardArray, 'testString', testString);
-    if(testString.indexOf('1111') !== -1){
-        console.log('you won');
+    if(testString.indexOf(playerWin) !== -1){
+        console.log('player ' + currentPlayer + ' won');
     }
     else{
         console.log('not a win');

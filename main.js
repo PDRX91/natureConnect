@@ -16,9 +16,10 @@ function processClick(){
     var that = this;
     //update board array with new position
     //once we update location of array we also check win condition and player
+    updateBoardSquare(that);
     locationUpdate(that);
     // update board square visual
-    updateBoardSquare(that);
+
 
 }
 function updateBoardSquare(that){
