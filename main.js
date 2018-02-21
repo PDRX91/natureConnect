@@ -1,6 +1,6 @@
 $(document).ready(initializeApp);
 
-var playerTurn = 2;
+var playerTurn = 1;
 
 function initializeApp(){
     clickHandler();
