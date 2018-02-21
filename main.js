@@ -9,17 +9,30 @@ function initializeApp(){
 }
 
 function clickHandler(){
-    $('.gameboard > div').click(getLocation);
+    $('.gameboard > div').click(processClick);
 }
 
-function getLocation(){
-    console.log('i have been clicked');
+function processClick(){
+    var that = this;
+    //update board array with new position
+    //once we update location of array we also check win condition and player
+    locationUpdate(that);
+    // update board square visual
+    updateBoardSquare(that);
+
+}
+function updateBoardSquare(that){
+
     if(playerTurn === 1){
-        $(this).css('background-color', 'green')
+        $(that).css('background-color', 'green')
     } else{
-        $(this).css('background-color', 'yellow')
+        $(that).css('background-color', 'yellow')
     }
-    var classes = $(this).attr('class');
+}
+function locationUpdate(that){
+    console.log('i have been clicked');
+
+    var classes = $(that).attr('class');
     var column = classes.charAt(6);
     var row = classes.charAt(11)
     var currentPlayer = playerTurn;
@@ -27,7 +40,7 @@ function getLocation(){
     console.log('column: ' + column);
     console.log('row: ' + row);
     console.log('current player: ' + currentPlayer);
-    // updateBoardArray(row, column, currentPlayer);
+     updateBoardArray(row, column, currentPlayer);
 
 }
 
@@ -44,4 +57,5 @@ function changePlayer(){
     } else{
         playerTurn = 1;
     }
+    console.log('we changed player and player is', playerTurn);
 }

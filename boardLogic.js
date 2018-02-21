@@ -1,8 +1,8 @@
 //create our board
 var boardArray = [];
-for (var row = 0; row < 7; row++){
+for (var row = 0; row < 6; row++){
     var eachRow = [];
-    for(var column = 0; column < 6; column++){
+    for(var column = 0; column < 7; column++){
         eachRow.push(0);
     }
     boardArray.unshift(eachRow);
@@ -18,16 +18,19 @@ function updateBoardArray(row, column, currentPlayer){
     for(var i = boardArray.length - 1; i >= 0; i--){
         if(boardArray[i][column] === 0){
             //change 1 to current player after we have that functionality;
-            boardArray[i][column] = 1;
+            boardArray[i][column] = currentPlayer;
+            checkWinCondition(row, column, currentPlayer);
+            return;
         }
     }
 }
 function checkWinCondition(row, column){
+    console.log('checking win at row', row, ' column', column);
     //check horizontal
     var won = true;
     var testString = 'row:';
     var diagStringUpward = ' UpwardDiagonal:';
-    var diagStringDownward = ' DownardDiagonal:';
+    var diagStringDownward = ' DownwardDiagonal:';
     var upwardDiagonal = row + column;
     var downwardDiagonal = row - column;
     for(var i = 0; i < boardArray[row].length; i++){
@@ -38,8 +41,8 @@ function checkWinCondition(row, column){
     for(var i = 0; i < boardArray.length; i++){
         testString += boardArray[i][column];
     }
-    for (var row = 0; row < 7; row++){
-        for(var column = 0; column < 6; column++){
+    for (var row = 0; row < 6; row++){
+        for(var column = 0; column < 7; column++){
             if(row+column === upwardDiagonal){
                 diagStringUpward += boardArray[row][column];
             }
