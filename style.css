@@ -1,17 +1,24 @@
-html{
-    font-size: 2.5vmin;
+html {
+    font-size: 3vmin;
 }
 
-body{
+html * {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+body {
     width:100vw;
     height:100vh;
-    font-size:0;
-    margin:0;
 }
 
 .mainPage{
-    width:100%;
-    height:100%;
+    width:90vmin;
+    height:90vmin;
+    margin: 0 auto;
 }
 
 .header{
@@ -23,17 +30,17 @@ body{
 }
 
 .statsContainer{
-    width: 15%;
+    width: 20%;
     height: 90%;
     background-color: blue;
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     vertical-align: top;
 }
 
 .mainContainer{
-    width:85%;
+    width:80%;
     height: 90%;
     display:inline-block;
 }
@@ -52,7 +59,7 @@ body{
     width: 20%;
     display: inline-block;
     text-align:center;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .gameContainer{
@@ -62,7 +69,7 @@ body{
 }
 
 .tokenHoverContainer{
-    width: 80%;
+    width: 84%;
     height: 10%;
     margin: auto;
     display: flex;
@@ -76,7 +83,8 @@ body{
     /* background-color: pink; */
     /* border: 1px solid black; */
     display: inline-flex;
-    justify-content: center;
+    justify-content: space-around;
+    border: 1px dashed green;
 }
 
 .tokenHoverContainer  img{
@@ -89,26 +97,31 @@ body{
 } */
 
 .gameboard{
-    width: 80%;
-    height:70%;
+    width: 84%;
+    height:72%;
     margin:auto;
     display:flex;
     flex-flow: column wrap;
+    /*background-color: gold;*/
+    justify-content: space-around;
+    padding-left: 1%;
 }
 
 .gameboard > div{
     /*box-sizing:border-box;*/
-
-    width: 14%;
-    height: 15.5%;
+    border-radius: 50%;
+    width: 13%;
+    height: 15%;
     background-color: lightcyan;
     border: 1px solid black;
 }
+
 .tokenActive{
     height: 100%;
     position:relative;
     transform:translateX(25%);
 }
+
 .fauxToken{
     height:100%;
     transform:translateX(25%);
