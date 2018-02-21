@@ -97,10 +97,11 @@ body{
 }
 
 .gameboard > div{
-    width: 14%;
+    width: 14.28%;
     height: 15.5%;
     background-color: lightcyan;
     border: 1px solid black;
+    box-sizing: border-box;
 }
 .tokenActive{
     height: 100%;
@@ -110,4 +111,13 @@ body{
 .fauxToken{
     height:100%;
     transform:translateX(25%);
+}
+
+.winBox{
+    height: 10%;
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    font-size: 3rem;
+    text-align: center;
 }

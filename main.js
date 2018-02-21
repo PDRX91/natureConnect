@@ -56,8 +56,11 @@ class Player{
 function changePlayer(){
     if(playerTurn === 1){
         playerTurn = 2;
+        $(".tokenHoverContainer img").attr('src', 'assets/token2.png')
     } else{
         playerTurn = 1;
+        $(".tokenHoverContainer img").attr('src', 'assets/token1.png')
+
     }
     console.log('we changed player and player is', playerTurn);
 }
@@ -78,4 +81,9 @@ function hideFauxToken(){
     var hoverSelector = ".tokenHoverContainer ." + currentColumn + " img"
     $(hoverSelector).css('display', 'none');
     console.log("I should be hidden now");
+}
+
+function winScreen(winner){
+    var winBox = $("<div>").addClass('winBox').text('Player ' + winner + ' wins!');
+    $('.gameContainer').append(winBox);
 }
