@@ -59,7 +59,15 @@ function changePlayer(){
         $(".tokenHoverContainer img").attr('src', 'assets/token2.png')
     } else{
         playerTurn = 1;
-        $(".tokenHoverContainer img").attr('src', 'assets/token1.png')
+        $(".tokenHoverContainer img").attr('src', 'assets/token1.png');
+        $(".player1").css({
+            'font-weight': 'bold',
+            'border': '3px solid black',
+            'font-size': '3rem'
+        })
+        // $(".player2").css({
+
+        // })
 
     }
     console.log('we changed player and player is', playerTurn);
