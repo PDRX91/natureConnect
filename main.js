@@ -41,9 +41,9 @@ function locationUpdate(that){
     console.log('column: ' + column);
     console.log('row: ' + row);
     console.log('current player: ' + currentPlayer);
-     updateBoardArray(row, column, currentPlayer);
-     createToken(column);
-     moveToken(row, column);
+    var placementRow = updateBoardArray(row, column, currentPlayer);
+     createToken(column, currentPlayer);
+     moveToken(placementRow, column);
 }
 
 class Player{
@@ -56,8 +56,19 @@ class Player{
 function changePlayer(){
     if(playerTurn === 1){
         playerTurn = 2;
+        $(".tokenHoverContainer img").attr('src', 'assets/token2.png')
     } else{
         playerTurn = 1;
+        $(".tokenHoverContainer img").attr('src', 'assets/token1.png');
+        $(".player1").css({
+            'font-weight': 'bold',
+            'border': '3px solid black',
+            'font-size': '3rem'
+        })
+        // $(".player2").css({
+
+        // })
+
     }
     console.log('we changed player and player is', playerTurn);
 }
@@ -67,15 +78,18 @@ function changePlayer(){
 function showFauxToken(){
     var currentHoveredClass = $(this).attr('class');
     var currentColumn = currentHoveredClass.substr(0,7);
-    var hoverSelector = ".tokenHoverContainer ." + currentColumn + " img"
+    var hoverSelector = "." + currentColumn + " img.faux"
     $(hoverSelector).css('display', 'inline-block');
-    console.log("I should be showing now");
 }
 
 function hideFauxToken(){
     var currentHoveredClass = $(this).attr('class');
     var currentColumn = currentHoveredClass.substr(0,7);
-    var hoverSelector = ".tokenHoverContainer ." + currentColumn + " img"
+    var hoverSelector = "." + currentColumn + " img.faux"
     $(hoverSelector).css('display', 'none');
-    console.log("I should be hidden now");
+}
+
+function winScreen(winner){
+    var winBox = $("<div>").addClass('winBox').text('Player ' + winner + ' wins!');
+    $('.gameContainer').append(winBox);
 }
