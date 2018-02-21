@@ -54,6 +54,7 @@ function checkWinCondition(row, column, currentPlayer){
     console.log('array', boardArray, 'testString', testString);
     if(testString.indexOf(playerWin) !== -1){
         console.log('player ' + currentPlayer + ' won');
+        winScreen(currentPlayer);
     }
     else{
         console.log('not a win');

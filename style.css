@@ -75,8 +75,6 @@ body{
 .tokenHoverContainer > div{
     width: 14%;
     height: 100%;
-    /* background-color: pink; */
-    /* border: 1px solid black; */
     display: inline-flex;
     justify-content: center;
 }
@@ -88,11 +86,6 @@ body{
     display:none;
     height:100%;
 }
-
-/* .tokenHoverContainer img:hover{
-    display:inline-block;
-} */
-
 .gameboard{
     width: 80%;
     height:70%;
@@ -106,7 +99,7 @@ body{
     height: 15.5%;
     background-color: lightcyan;
     border: 1px solid black;
-    /*box-sizing:border-box;*/
+
 }
 .tokenActive {
     position:absolute;
@@ -119,4 +112,13 @@ body{
 .fauxToken{
     height:100%;
     transform:translateX(25%);
+}
+
+.winBox{
+    height: 10%;
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    font-size: 3rem;
+    text-align: center;
 }
