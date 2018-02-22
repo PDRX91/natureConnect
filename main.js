@@ -17,19 +17,10 @@ function processClick(){
     var that = this;
     //update board array with new position
     //once we update location of array we also check win condition and player
-    updateBoardSquare(that);
     locationUpdate(that);
     // update board square visual
 }
 
-function updateBoardSquare(that){
-
-    if(playerTurn === 1){
-        $(that).css('background-color', 'green')
-    } else{
-        $(that).css('background-color', 'yellow')
-    }
-}
 function locationUpdate(that){
     console.log('i have been clicked');
 
@@ -56,25 +47,38 @@ class Player{
 function changePlayer(){
     if(playerTurn === 1){
         playerTurn = 2;
-        $(".tokenHoverContainer img").attr('src', 'assets/token2.png')
+        $(".tokenHoverContainer img").attr('src', 'assets/token2.png');
+        $(".player2").css({
+            'font-weight': 'bold',
+            'border': '3px solid black',
+            'font-size': '1.5rem',
+            'padding-top': '1%',
+        })
+        $(".player1").css({
+            'font-weight': 'normal',
+            'border': 'none',
+            'font-size': '1rem',
+            'padding-top': '3%',
+        })
     } else{
         playerTurn = 1;
         $(".tokenHoverContainer img").attr('src', 'assets/token1.png');
         $(".player1").css({
             'font-weight': 'bold',
             'border': '3px solid black',
-            'font-size': '3rem'
+            'font-size': '1.5rem',
+            'padding-top': '1%',
         })
-        // $(".player2").css({
-
-        // })
+        $(".player2").css({
+            'font-weight': 'normal',
+            'border': 'none',
+            'font-size': '1rem',
+            'padding-top': '3%',
+        })
 
     }
     console.log('we changed player and player is', playerTurn);
 }
-
-//version 1.0
-//version 2.0
 
 function showFauxToken(){
     var currentHoveredClass = $(this).attr('class');
