@@ -13,7 +13,8 @@ html * {
     margin: 0;
     padding: 0;
     font-size: 0;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Freckle Face', cursive;
+    color:white;
     box-sizing: border-box;
 }
 
@@ -26,6 +27,7 @@ body {
 h1{
     margin: 0;
     font-size: 2rem;
+    background-color: rgba(75, 189, 271, .4);
 }
 *{
     box-sizing:border-box;
@@ -63,7 +65,6 @@ h1{
     text-align: center;
     vertical-align: top;
     padding-top: 2%;
-    border: 1px solid blue;
 }
 
 .statsContainer * {
@@ -88,7 +89,8 @@ h1{
 }
 
 .player1{
-    border: 3px solid black;
+    /* border: 3px solid rgba(169, 166, 166, .5); */
+    background-color: rgba(75, 189, 271, .7);
     font-weight: bold;
     font-size: 1.5rem;
     padding-top: 2%;
@@ -96,6 +98,7 @@ h1{
 
 .player2{
     font-weight:normal;
+    background-color: rgba(75, 189, 271, .4);
     border: none;
     font-size: 1rem;
     vertical-align: center;
@@ -111,7 +114,7 @@ h1{
 }
 
 .gameContainer{
-    height: 90%;
+    height: 75%;
     width: 100%;
     background-color: rgba(75, 189, 271, .3);
     border-radius: 5%;
@@ -119,19 +122,18 @@ h1{
 
 .tokenHoverContainer{
     width: 84%;
-    height: 10%;
+    height: 14.3%;
     margin: auto;
     display: flex;
     flex-flow: column wrap;
-    padding-top: 1%;
+    justify-content: space-around;
 }
 
 .tokenHoverContainer > div{
-    width: 14%;
+    width: 14.28%;
     height: 100%;
     display: inline-flex;
     justify-content: space-around;
-    border: 1px dashed green;
 }
 
 .tokenHoverContainer  img{
@@ -143,28 +145,27 @@ h1{
 }
 .gameboard{
     width: 84%;
-    height:72%;
+    height: 84.5%;
     margin:auto;
     display:flex;
     flex-flow: column wrap;
-    background-color: rgba(255,255,255,0.3);
     justify-content: space-around;
-    padding-left: 1%;
     z-index: 50;
 }
 
 .gameboard > div{
     border-radius: 50%;
-    width: 13%;
-    height: 15%;
-
-    /*background-color: rgba(255, 255,255,0);*/
-    /*opacity: 0.5;*/
+    height: 16.3%;
+    width: 14.28%;
     z-index: 49;
     border-left: 1px ridge brown;
     border-right: 2px ridge beige;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.winMsg {
+    height: 18%;
 }
 
 #tokenActive {
@@ -185,7 +186,7 @@ h1{
     height: 13%;
     width: 80%;
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid rgb(169, 166, 166);
     font-size: 2.5rem;
     text-align: center;
 }

@@ -47,12 +47,14 @@ function changePlayer(){
         $(".tokenHoverContainer img").attr('src', 'assets/token2.png');
         $(".player2").css({
             'font-weight': 'bold',
-            'border': '3px solid black',
+            // 'border': '3px solid rgba(169, 166, 166, .5)',
+            'background-color': 'rgba(75, 189, 271, .7)',
             'font-size': '1.5rem',
             'padding-top': '2%',
         })
         $(".player1").css({
             'font-weight': 'normal',
+            'background-color': 'rgba(75, 189, 271, .4)',
             'border': 'none',
             'font-size': '1rem',
             'padding-top': '3%',
@@ -62,12 +64,14 @@ function changePlayer(){
         $(".tokenHoverContainer img").attr('src', 'assets/token1.png');
         $(".player1").css({
             'font-weight': 'bold',
-            'border': '3px solid black',
+            // 'border': '3px solid rgba(169, 166, 166, .5)',
+            'background-color': 'rgba(75, 189, 271, .7)',
             'font-size': '1.5rem',
             'padding-top': '2%',
         })
         $(".player2").css({
             'font-weight': 'normal',
+            'background-color': 'rgba(75, 189, 271, .4)',
             'border': 'none',
             'font-size': '1rem',
             'padding-top': '3%',
@@ -100,9 +104,9 @@ function hideFauxToken(column){
     $(hoverSelector).css('display', 'none');
 }
 
-function resultScreen(result){
+function resultScreen(result) {
     console.log('this is our result', result);
-    if(result === 'tie'){
+    if (result === 'tie') {
         var winBox = $("<div>").addClass('winBox').text('Tie Game...');
         $('.winMsg').append(winBox);
     }
