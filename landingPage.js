@@ -10,8 +10,8 @@ var landingPage = {
 	playTo: 1,
 	getBestOf: function() {
 			var bestOf = $('.bestOfOptions option:selected').val();
-			this.playTo = bestOf;
-			$('.playTo') = bestOf;
+			// this.playTo = bestOf;
+			$('.playToNumber').text(bestOf);
 			// console.log(playTo);
 	},
 	setPlayerTokenImg: function() {

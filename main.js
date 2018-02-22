@@ -16,7 +16,6 @@ function initializeApp(){
 }
 function clickHandler(){
     $('.tokens>div').on('click', function(){
-
         landingPage.setPlayerTokenImg().bind(this);
     });
     $('.bestOfOptions').change(function(){
