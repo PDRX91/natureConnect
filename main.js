@@ -11,18 +11,19 @@ function initializeApp(){
     // player1 = new Player('ai', 1, 1);
     // player2 = new Player('ai', 2, 3);
     board.createBoard();
-    // $('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
-}
 
+    //$('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
+}
 function clickHandler(){
     $('.tokens>div').on('click', function(){
-        landingPage.setPlayerTokenImg.bind(landingPage);
+
+        landingPage.setPlayerTokenImg().bind(this);
     });
     $('.bestOfOptions').change(function(){
-        landingPage.getBestOf.bind(landingPage);
+        landingPage.getBestOf().bind(this);
     });
     $('.startBtn').on('click', function(){
-        landingPage.hideLanding.bind(landingPage);
+        landingPage.hideLanding().bind(this);
     });
     $('.gameboard > div').click(processMove);
     $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);
@@ -67,7 +68,7 @@ function resultScreen(result) {
         $('.winMsg').append(winBox);
     }
     else {
-        if(player1.name === 'ai' && player2.name === 'ai'){
+        if(player1.name === 'AI' && player2.name === 'AI'){
             var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' ' + activePlayer.playerNumber + ' wins!');
         }
         else{
