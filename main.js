@@ -115,3 +115,5 @@ function resultScreen(result) {
         $('.winMsg').append(winBox);
     }
 }
+
+//version3.0
