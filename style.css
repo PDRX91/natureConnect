@@ -136,15 +136,16 @@ body {
     background-color: lightcyan;
     border: 1px solid black;
 
+
 }
 
-.tokenActive {
-    position:absolute;
+#tokenActive {
+    position:relative;
     /*height:;*/
-    width:50px;
-    height:50px !important;  
+    height:100%;
+    /*height:100%; !important;*/
     /*Fix the important later~~~~~~~~~~*/
-    transform:translateX(25%);
+    #transform:translateX(25%);
 }
 
 .fauxToken{
@@ -160,3 +161,8 @@ body {
     font-size: 2.5rem;
     text-align: center;
 }
+/*.activeTokenDiv{*/
+    /*position:relative;*/
+    /*width:100%;*/
+    /*height:100%;*/
+/*}*/

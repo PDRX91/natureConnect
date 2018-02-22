@@ -1,42 +1,48 @@
-
+var stopHover = 'no';
 function createToken(column, playerNumber){
+    stopHover = 'yes';
+    hideFauxToken(column);
     var startSquare = $('.tokenHoverContainer .column' + column);
+    // var activeDivContainer = $('<div>',{
+    //     class:'activeTokenDiv',
+    //     'background-color':'blue',
+    //     'background-image': 'url(assets/token' + playerNumber + '.png',
+    //     'background-size':'contain'
+    // });
+    // console.log('created the container', activeDivContainer);
+    // startSquare.append(activeDivContainer);
     var activeToken = $('<img>',{
-        'class':'tokenActive',
+        'id':'tokenActive',
         src:'assets/token' + playerNumber + '.png',
     });
-    startSquare.append(activeToken);
+    startSquare.prepend(activeToken);
 }
 
-function moveToken(row, col) {
-    var token = $('.tokenActive');
+function moveToken(row, col, playerNumber) {
+    var token = $('#tokenActive');
     var duration = 300 + 100*row;
-    var targetRow = $('.row' + row);
-    var targetColumn = $('.column' + col);
-    var rowPosition = targetRow.position().top;
-    var colPosition = targetColumn.position().left;
-    token.animate({top: rowPosition, left: colPosition},
+    var target = $('.column' + col + '.row' + row);
+    var rowPosition = target.position().top - $('#tokenActive').position().top;
+    var colPosition = target.position().left;
+    stopHover = 'yes';
+    token.animate({top: rowPosition},
         duration, 'linear', function(){
-            changeToFaux(row, col);
+            changeToFaux(row, col, playerNumber);
             token.css('display','none');
             token.remove();
+            stopHover = 'no';
         });
-        //put this directly into animate once we can ease
-    // 'futureEasing',
-    //     function(){
-    //         console.log('we just moved');
-    //     });
-    // changeToFaux(row, col);
-    // token.css('display','none');
-    // token.remove();
 }
 
-function changeToFaux(row, col){
+function changeToFaux(row, col, playerNumber){
     var targetSquare = $('.column' + col + '.row' + row);
     var tokenImage = $('<img>',{
         'class':'fauxToken',
-        src:'assets/blackToken1.png'
+        src:'assets/token' + playerNumber + '.png'
     });
-    targetSquare.append(tokenImage);
-
+    // targetSquare.append(tokenImage);
+    targetSquare.css({
+        'background-image':
+        'url(assets/token' + playerNumber + '.png',
+        'background-size':'contain'});
 }

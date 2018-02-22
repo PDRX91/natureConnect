@@ -19,7 +19,6 @@ function updateBoardArray(row, column, currentPlayer){
     }
 }
 function checkWinCondition(row, column, currentPlayer){
-    console.log('checking win at row', row, ' column', column);
     //check horizontal
     var won = true;
     var playerWin = currentPlayer.toString() +
@@ -53,7 +52,6 @@ function checkWinCondition(row, column, currentPlayer){
     testString += diagStringUpward + diagStringDownward;
     console.log('array', boardArray, 'testString', testString);
     if(testString.indexOf(playerWin) !== -1){
-        console.log('player ' + currentPlayer + ' won');
         winScreen(currentPlayer);
     }
     else{
