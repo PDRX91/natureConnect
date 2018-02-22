@@ -16,45 +16,49 @@ function updateBoardArray(row, column, currentPlayer){
             boardArray[i][column] = currentPlayer;
             return i;
         }
-
     }
+    return -1;
 }
-function checkWinCondition(row, column, currentPlayer){
+function checkWinCondition(tokenRow, tokenColumn, currentPlayer){
     //check horizontal
     var playerWin = currentPlayer.toString() +
                     currentPlayer +
                     currentPlayer +
                     currentPlayer;
-    var testString = 'row:';
+    var testString = 'Row:';
+    var verticalString = 'Vertical:';
     var diagStringUpward = ' UpwardDiagonal:';
     var diagStringDownward = ' DownwardDiagonal:';
-    var upwardDiagonal = parseInt(row) + parseInt(column);
-    var downwardDiagonal = row - column;
-    for(var i = 0; i < boardArray[row].length; i++){
-        testString += boardArray[row][i];
-    }
-    //check vertical
-    testString += ' col:'
-    for(var i = 0; i < boardArray.length; i++){
-        testString += boardArray[i][column];
-    }
-    //check diagonal
+    var upwardDiagonal = parseInt(tokenRow) + parseInt(tokenColumn);
+    var downwardDiagonal = tokenRow - tokenColumn;
     tie = true;
+
     for (var row = 0; row < 6; row++){
         for(var column = 0; column < 7; column++){
+            //add upward diagonal
             if(row+column === upwardDiagonal){
                 diagStringUpward += boardArray[row][column];
             }
+            //add downward diagonal
             if(row - column === downwardDiagonal){
                 diagStringDownward += boardArray[row][column]
             }
+            //check tie
             if(boardArray[row][column] === 0){
                 tie = false;
+            }
+            //check horizontal and add to string
+            if(row === tokenRow){
+                testString+= boardArray[tokenRow][column];
+            }
+            //check vertical and add
+            if(column === parseInt(tokenColumn)){
+                verticalString += boardArray[row][tokenColumn];
             }
 
         }
     }
-    testString += diagStringUpward + diagStringDownward;
+    testString += verticalString + diagStringUpward + diagStringDownward;
     console.log('array', boardArray, 'testString', testString);
 
     changePlayer();
@@ -62,8 +66,6 @@ function checkWinCondition(row, column, currentPlayer){
         return 'tie';
     }
     else if(testString.indexOf(playerWin) !== -1){
-        $('div.gameContainer').addClass('disableClicks');
-
         return 'win';
     }
     else{

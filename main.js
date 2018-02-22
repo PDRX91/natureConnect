@@ -30,8 +30,9 @@ function locationUpdate(that){
     // console.log('row: ' + row);
     // console.log('current player: ' + currentPlayer);
     var placementRow = updateBoardArray(row, column, currentPlayer);
-     createToken(column, currentPlayer);
-     moveToken(placementRow, column, currentPlayer);
+        createToken(column, currentPlayer);
+        moveToken(placementRow, column, currentPlayer);
+
 }
 
 class Player{

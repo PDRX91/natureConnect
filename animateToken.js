@@ -29,6 +29,7 @@ function moveToken(row, col, playerNumber) {
 
             if(result === 'win'){
             // class="playerDisplay1
+                $('div.gameContainer').addClass('disableClicks');
                 resultScreen(playerNumber);
                 console.log('we won');
             }
