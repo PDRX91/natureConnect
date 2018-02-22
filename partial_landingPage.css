@@ -13,6 +13,8 @@ html * {
 body {
     width:100vw;
     height:100vh;
+    background: url(assets/Img/scenery-pictures-3.jpg);
+    background-size: cover;
 }
 
 *{
@@ -23,9 +25,92 @@ body {
 
 }
 
-.landingMain {
+.landingContainer {
  	border: 1px solid red;
- 	width: 90%;
- 	height: 100%;
- 	margin: 0 auto;
+    width:100vmin;
+    height:100vmin;
+    margin: 0 auto;
+}
+
+.landingHeader {
+	height:10%;
+    width:100%;
+    font-size: 2rem;
+    background-color:limegreen;
+    text-align:center;
+}
+
+.landingBody {
+	height:90%;
+    width:100%;
+    background-color: grey;
+}
+
+.landingPlayer {
+	height: 40%;
+	border: 1px dashed blue;
+}
+
+.landingPlayer > div {
+	width: 50%;
+	height: 20%;
+	display: inline-block;
+	border: 1px dashed blue;
+}
+
+div.player1Img, div.player2Img {
+	height: 60%;
+}
+
+.landingPlayer p, .landingPlayer input, .landingPlayer button {
+	font-size: 1rem;
+	text-align: center;
+}
+
+.landingPlayer input {
+	width: 60%;
+	margin: 0 5%;
+}
+
+div.playTo {
+	width: 80%;
+	height: 20%;
+	display: block;
+	margin: 0 auto;
+	border: 1px dashed green;
+}
+
+div.playTo > select, div.playTo > p {
+	font-size: 1rem;
+	display: inline-block;
+}
+
+div.playTo > p {
+	padding-left:  15%;
+	padding-right: 2%;
+}
+
+.tokens {
+	height: 40%;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.tokens div {
+	height: 40%;
+	width: 30%;
+	border: 1px dashed yellow;
+}
+
+.start {
+	height: 10%;
+	width: 100%;
+	text-align: center;
+}
+
+.startBtn {
+	font-size: 1rem;
+	display: inline-block;
 }
