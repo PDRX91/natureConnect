@@ -99,7 +99,7 @@ h1{
     font-size: 1.5rem;
     padding-top: 2%;
     padding-left: 2%;
-    background-image: url('assets/token1.png');
+    /*background-image: url('assets/token1.png');*/
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -112,7 +112,7 @@ h1{
     vertical-align: center;
     padding-top:3%;
     padding-left: 2%;
-    background-image: url('assets/token2.png');
+    /*background-image: url('assets/token2.png');*/
     background-repeat: no-repeat;
     background-size: contain;
 }

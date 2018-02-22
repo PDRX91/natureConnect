@@ -1,110 +1,56 @@
 $(document).ready(initializeApp);
-var playerTurn = 1;
-var stopHover = 'no';
+//var playerTurn = 1;
+// var stopHover = 'no';
+var activePlayer = null;
+var player1 = null;
+var player2 = null;
+
 function initializeApp(){
     clickHandler();
-    var player1 = new Player('John');
-    var player2 = new Player('Susie');
+    // player(name, number, tokenNumber)/
+    player1 = new Player('ai', 1, 1);
+    player2 = new Player('ai', 2, 3);
+    board.createBoard();
+    $('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
 }
 
 function clickHandler(){
-    $('.gameboard > div').click(processClick);
-    $(".gameboard > div").hover(checkShowFauxToken, hideFauxToken);
+    $('.gameboard > div').click(processMove);
+    $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);
 }
 
-function processClick(){
-    var that = this;
-    //update board array with new position
-    //once we update location of array we also check win condition and player
-    locationUpdate(that);
-}
+function processMove(){
 
-function locationUpdate(that){
-
-    var classes = $(that).attr('class');
+    var classes = $(this).attr('class');
     var column = classes.charAt(6);
     var row = classes.charAt(11);
-    var currentPlayer = playerTurn;
-
-    // console.log('column: ' + column);
-    // console.log('row: ' + row);
-    // console.log('current player: ' + currentPlayer);
-    var placementRow = updateBoardArray(row, column, currentPlayer);
-        createToken(column, currentPlayer);
-        moveToken(placementRow, column, currentPlayer);
+    var currentPlayer = board.playerTurn;
+    if(currentPlayer === player1.playerNumber){
+        activePlayer = player1;
+    }
+    else{
+        activePlayer = player2;
+    }
+    activePlayer.status = 'active';
+    var placementRow = board.updateBoardArray(row, column, activePlayer.playerNumber);
+    tokenAnimation.createToken(column, activePlayer.playerNumber, activePlayer.tokenNumber);
+    //tokenAnimation is processing logic after token drop. e.g.
+    // player switching and win checking
+    tokenAnimation.moveToken(placementRow, column, activePlayer.playerNumber, activePlayer.tokenNumber);
 
 }
 
 class Player{
-    constructor(name){
+    constructor(name, playerNumber, tokenNumber){
         this.name = name || 'Player 1';
+        this.playerNumber = playerNumber;
+        this.tokenNumber = tokenNumber;
+        $('.player' + this.playerNumber ).text(this.name);
+        this.status = 'inactive';
+        $('.player' + playerNumber).css('background-image', 'url(assets/token' + tokenNumber + '.png)')
     }
-}
 
-
-function changePlayer(){
-    if(playerTurn === 1){
-        playerTurn = 2;
-        $(".tokenHoverContainer img").attr('src', 'assets/token2.png');
-        $(".player2").css({
-            'font-weight': 'bold',
-            // 'border': '3px solid rgba(169, 166, 166, .5)',
-            'background-color': 'rgba(75, 189, 271, .7)',
-            'font-size': '1.5rem',
-            'padding-top': '2%',
-        })
-        $(".player1").css({
-            'font-weight': 'normal',
-            'background-color': 'rgba(75, 189, 271, .4)',
-            'border': 'none',
-            'font-size': '1rem',
-            'padding-top': '3%',
-        })
-    } else{
-        playerTurn = 1;
-        $(".tokenHoverContainer img").attr('src', 'assets/token1.png');
-        $(".player1").css({
-            'font-weight': 'bold',
-            // 'border': '3px solid rgba(169, 166, 166, .5)',
-            'background-color': 'rgba(75, 189, 271, .7)',
-            'font-size': '1.5rem',
-            'padding-top': '2%',
-        })
-        $(".player2").css({
-            'font-weight': 'normal',
-            'background-color': 'rgba(75, 189, 271, .4)',
-            'border': 'none',
-            'font-size': '1rem',
-            'padding-top': '3%',
-        })
-
-    }
-    console.log('we changed player and player is', playerTurn);
 }
-function checkShowFauxToken(){
-    var that = this;
-    if(stopHover ==='no'){
-        showFauxToken(that);
-    }
-}
-function showFauxToken(that){
-    var currentHoveredClass = $(that).attr('class');
-    var currentColumn = currentHoveredClass.substr(0,7);
-    var hoverSelector = "." + currentColumn + " img.faux"
-    $(hoverSelector).css('display', 'inline-block');
-}
-
-function hideFauxToken(column){
-    if(typeof column === 'string'){
-        $('.column' + column + ' img.faux').css('display','none');
-        return;
-    }
-    var currentHoveredClass = $(this).attr('class');
-    var currentColumn = currentHoveredClass.substr(0,7);
-    var hoverSelector = "." + currentColumn + " img.faux"
-    $(hoverSelector).css('display', 'none');
-}
-
 function resultScreen(result) {
     console.log('this is our result', result);
     if (result === 'tie') {
@@ -112,9 +58,13 @@ function resultScreen(result) {
         $('.winMsg').append(winBox);
     }
     else {
-        var winBox = $("<div>").addClass('winBox').text('Player ' + result + ' wins!');
+        if(player1.name === 'ai' && player2.name === 'ai'){
+            var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' ' + activePlayer.playerNumber + ' wins!');
+        }
+        else{
+            var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' wins!');
+
+        }
         $('.winMsg').append(winBox);
     }
 }
-
-//version3.0

@@ -7,21 +7,41 @@
 //else just play a random legal move.
 
 //start AI as second player when we are in single player mode.
-if(gameMode = 'single player'){
-    //var player2 = new Player('AI', 2);
-}
+
+
+
+//remove this feature for now by disabling it in linked pages html
+// if(player2.name === 'ai'){
+//
+// }
 
 //
-var legalMoveArray = [];
+// var legalMoveArray = [];
+function moveAi(){
+    // if(activePlayer.playerNumber === 1) {
+        var move = checkForWinAndLoss();
+        var randomRow = null;
+        console.log('move is', move);
+        if (move === null) {
+            while (board.boardArray[0][randomRow] !== 0) {
+                randomRow = Math.floor(Math.random() *
+                    board.boardArray[0].length);
+            }
+            console.log('row is', randomRow);
+            move = randomRow;
+        }
+        $('.column' + move + '.row5').click();
+    // }
+}
 function checkForWinAndLoss(){
     //ai is 2
-    var currentPlayer = 2;
+    var checkPlayer = 2;
     var nextMove = null;
     //var legalMoveArray = [];
-    for(var i = 0; i < boardArray[0].length; i++){
-         var move = updateBoardArray(5, i, currentPlayer);
+    for(var i = 0; i < board.boardArray[0].length; i++){
+         var move = board.updateBoardArray(5, i, checkPlayer);
          if(move != -1){
-             if(checkWinCondition(move, i, currentPlayer) === 'win'){
+             if(board.checkWinCondition(move, i, checkPlayer) === 'win'){
                  deleteSimulatedMove(move, i);
                  nextMove = i;
                  console.log('ai wants to place in this column', nextMove);
@@ -31,10 +51,25 @@ function checkForWinAndLoss(){
                  deleteSimulatedMove(move,i);
              }
          }
-
     }
+    checkPlayer = 1;
+    for(var i = 0; i < board.boardArray[0].length; i++){
+        var move = board.updateBoardArray(5, i, checkPlayer);
+        if(move != -1){
+            if(board.checkWinCondition(move, i, checkPlayer) === 'win'){
+                deleteSimulatedMove(move, i);
+                nextMove = i;
+                console.log('ai wants to place in this column', nextMove);
+                return nextMove;
+            }
+            else{
+                deleteSimulatedMove(move,i);
+            }
+        }
+    }
+    return nextMove;
 }
 
 function deleteSimulatedMove(row, column){
-    boardArray[row][column] = 0;
+    board.boardArray[row][column] = 0;
 }
