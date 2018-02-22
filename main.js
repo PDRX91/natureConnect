@@ -18,7 +18,6 @@ function processClick(){
     //update board array with new position
     //once we update location of array we also check win condition and player
     locationUpdate(that);
-    // update board square visual
 }
 
 function locationUpdate(that){
@@ -52,7 +51,7 @@ function changePlayer(){
             'font-weight': 'bold',
             'border': '3px solid black',
             'font-size': '1.5rem',
-            'padding-top': '1%',
+            'padding-top': '2%',
         })
         $(".player1").css({
             'font-weight': 'normal',
@@ -67,7 +66,7 @@ function changePlayer(){
             'font-weight': 'bold',
             'border': '3px solid black',
             'font-size': '1.5rem',
-            'padding-top': '1%',
+            'padding-top': '2%',
         })
         $(".player2").css({
             'font-weight': 'normal',
