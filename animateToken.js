@@ -8,7 +8,7 @@ function createToken(column, playerNumber){
     startSquare.append(activeToken);
 }
 
-function moveToken(row, col) {
+function moveToken(row, col, playerNumber) {
     var token = $('.tokenActive');
     var duration = 300 + 100*row;
     var targetRow = $('.row' + row);
@@ -17,26 +17,22 @@ function moveToken(row, col) {
     var colPosition = targetColumn.position().left;
     token.animate({top: rowPosition, left: colPosition},
         duration, 'linear', function(){
-            changeToFaux(row, col);
+            changeToFaux(row, col, playerNumber);
             token.css('display','none');
             token.remove();
         });
-        //put this directly into animate once we can ease
-    // 'futureEasing',
-    //     function(){
-    //         console.log('we just moved');
-    //     });
-    // changeToFaux(row, col);
-    // token.css('display','none');
-    // token.remove();
 }
 
-function changeToFaux(row, col){
+function changeToFaux(row, col, playerNumber){
+    console.log(playerNumber,'playerNubmer');
     var targetSquare = $('.column' + col + '.row' + row);
     var tokenImage = $('<img>',{
         'class':'fauxToken',
-        src:'assets/blackToken1.png'
+        src:'assets/token' + playerNumber + '.png'
     });
-    targetSquare.append(tokenImage);
-
+    // targetSquare.append(tokenImage);
+    targetSquare.css({
+        'background-image':
+        'url(assets/token' + playerNumber + '.png',
+        'background-size':'contain'});
 }
