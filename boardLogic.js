@@ -63,6 +63,7 @@ function checkWinCondition(row, column, currentPlayer){
     }
     else if(testString.indexOf(playerWin) !== -1){
         $('div.gameContainer').addClass('disableClicks');
+
         return 'win';
     }
     else{

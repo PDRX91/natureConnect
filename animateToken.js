@@ -28,6 +28,7 @@ function moveToken(row, col, playerNumber) {
             var result = checkWinCondition(row, col, playerNumber);
 
             if(result === 'win'){
+            // class="playerDisplay1
                 resultScreen(playerNumber);
                 console.log('we won');
             }
