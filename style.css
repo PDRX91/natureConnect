@@ -27,6 +27,7 @@ body {
 h1{
     margin: 0;
     font-size: 2rem;
+    background-color: rgba(75, 189, 271, .4);
 }
 *{
     box-sizing:border-box;
@@ -89,7 +90,8 @@ h1{
 }
 
 .player1{
-    border: 3px solid black;
+    /* border: 3px solid rgba(169, 166, 166, .5); */
+    background-color: rgba(75, 189, 271, .7);
     font-weight: bold;
     font-size: 1.5rem;
     padding-top: 2%;
@@ -97,6 +99,7 @@ h1{
 
 .player2{
     font-weight:normal;
+    background-color: rgba(75, 189, 271, .4);
     border: none;
     font-size: 1rem;
     vertical-align: center;
@@ -132,7 +135,6 @@ h1{
     height: 100%;
     display: inline-flex;
     justify-content: space-around;
-    border: 1px dashed green;
 }
 
 .tokenHoverContainer  img{
@@ -186,7 +188,7 @@ h1{
     height: 13%;
     width: 80%;
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid rgb(169, 166, 166);
     font-size: 2.5rem;
     text-align: center;
 }

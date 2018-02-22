@@ -47,12 +47,14 @@ function changePlayer(){
         $(".tokenHoverContainer img").attr('src', 'assets/token2.png');
         $(".player2").css({
             'font-weight': 'bold',
-            'border': '3px solid black',
+            // 'border': '3px solid rgba(169, 166, 166, .5)',
+            'background-color': 'rgba(75, 189, 271, .7)',
             'font-size': '1.5rem',
             'padding-top': '2%',
         })
         $(".player1").css({
             'font-weight': 'normal',
+            'background-color': 'rgba(75, 189, 271, .4)',
             'border': 'none',
             'font-size': '1rem',
             'padding-top': '3%',
@@ -62,12 +64,14 @@ function changePlayer(){
         $(".tokenHoverContainer img").attr('src', 'assets/token1.png');
         $(".player1").css({
             'font-weight': 'bold',
-            'border': '3px solid black',
+            // 'border': '3px solid rgba(169, 166, 166, .5)',
+            'background-color': 'rgba(75, 189, 271, .7)',
             'font-size': '1.5rem',
             'padding-top': '2%',
         })
         $(".player2").css({
             'font-weight': 'normal',
+            'background-color': 'rgba(75, 189, 271, .4)',
             'border': 'none',
             'font-size': '1rem',
             'padding-top': '3%',
@@ -102,5 +106,5 @@ function hideFauxToken(column){
 
 function winScreen(winner){
     var winBox = $("<div>").addClass('winBox').text('Player ' + winner + ' wins!');
-    $('.gameContainer').append(winBox);
+    $('.winMsg').append(winBox);
 }
