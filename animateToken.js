@@ -1,16 +1,7 @@
-var stopHover = 'no';
 function createToken(column, playerNumber){
     stopHover = 'yes';
     hideFauxToken(column);
     var startSquare = $('.tokenHoverContainer .column' + column);
-    // var activeDivContainer = $('<div>',{
-    //     class:'activeTokenDiv',
-    //     'background-color':'blue',
-    //     'background-image': 'url(assets/token' + playerNumber + '.png',
-    //     'background-size':'contain'
-    // });
-    // console.log('created the container', activeDivContainer);
-    // startSquare.append(activeDivContainer);
     var activeToken = $('<img>',{
         'id':'tokenActive',
         src:'assets/token' + playerNumber + '.png',
@@ -34,7 +25,22 @@ function moveToken(row, col, playerNumber) {
             if(row === 0){
                 disableColumn(col);
             }
-            $('div.gameContainer').removeClass('disableClicks');
+            var result = checkWinCondition(row, col, playerNumber);
+
+            if(result === 'win'){
+                resultScreen(playerNumber);
+                console.log('we won');
+            }
+            else if(result === 'tie'){
+                console.log('we tied');
+                resultScreen('tie');
+            }
+            else{
+                console.log('re-adding clicks');
+                $('div.gameContainer').removeClass('disableClicks');
+
+            }
+
         });
 }
 

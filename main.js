@@ -1,6 +1,6 @@
 $(document).ready(initializeApp);
-
 var playerTurn = 1;
+var stopHover = 'no';
 function initializeApp(){
     clickHandler();
     var player1 = new Player('John');
@@ -100,7 +100,14 @@ function hideFauxToken(column){
     $(hoverSelector).css('display', 'none');
 }
 
-function winScreen(winner){
-    var winBox = $("<div>").addClass('winBox').text('Player ' + winner + ' wins!');
-    $('.gameContainer').append(winBox);
+function resultScreen(result){
+    console.log('this is our result', result);
+    if(result === 'tie'){
+        var winBox = $("<div>").addClass('winBox').text('Tie Game...');
+        $('.winMsg').append(winBox);
+    }
+    else {
+        var winBox = $("<div>").addClass('winBox').text('Player ' + result + ' wins!');
+        $('.winMsg').append(winBox);
+    }
 }
