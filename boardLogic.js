@@ -1,30 +1,32 @@
 //create our board
 var tie = 'true';
-var boardArray = [];
-for (var row = 0; row < 6; row++){
-    var eachRow = [];
-    for(var column = 0; column < 7; column++){
-        eachRow.push(0);
-    }
-    boardArray.unshift(eachRow);
-}
-
-function updateBoardArray(row, column, currentPlayer){
-    //go through each row at my column and check if there is a 0 there. if yes change to currentPlayer variable return
-    for(var i = boardArray.length - 1; i >= 0; i--){
-        if(boardArray[i][column] === 0){
-            boardArray[i][column] = currentPlayer;
-            return i;
+var board = {
+    playerTurn:1,
+    boardArray:[],
+    createBoard:function(){
+        for (var row = 0; row < 6; row++){
+            var eachRow = [];
+            for(var column = 0; column < 7; column++){
+                eachRow.push(0);
+            }
+            this.boardArray.unshift(eachRow);
         }
-    }
-    return -1;
-}
-function checkWinCondition(tokenRow, tokenColumn, currentPlayer){
-    //check horizontal
+    },
+    updateBoardArray: function (row, column, currentPlayer){
+    //go through each row at my column and check if there is a 0 there. if yes change to currentPlayer variable return
+        for(var i = this.boardArray.length - 1; i >= 0; i--){
+            if(this.boardArray[i][column] === 0){
+                this.boardArray[i][column] = currentPlayer;
+                return i;
+            }
+        }
+        return -1;
+    },
+    checkWinCondition: function (tokenRow, tokenColumn, currentPlayer){
     var playerWin = currentPlayer.toString() +
-                    currentPlayer +
-                    currentPlayer +
-                    currentPlayer;
+        currentPlayer +
+        currentPlayer +
+        currentPlayer;
     var testString = 'Row:';
     var verticalString = 'Vertical:';
     var diagStringUpward = ' UpwardDiagonal:';
@@ -32,49 +34,85 @@ function checkWinCondition(tokenRow, tokenColumn, currentPlayer){
     var upwardDiagonal = parseInt(tokenRow) + parseInt(tokenColumn);
     var downwardDiagonal = tokenRow - tokenColumn;
     tie = true;
-
     for (var row = 0; row < 6; row++){
         for(var column = 0; column < 7; column++){
-            //add upward diagonal
+            //add to upward diagonal
             if(row+column === upwardDiagonal){
-                diagStringUpward += boardArray[row][column];
+                diagStringUpward += this.boardArray[row][column];
             }
-            //add downward diagonal
+            //add to downward diagonal
             if(row - column === downwardDiagonal){
-                diagStringDownward += boardArray[row][column]
+                diagStringDownward += this.boardArray[row][column]
             }
             //check tie
-            if(boardArray[row][column] === 0){
+            if(this.boardArray[row][column] === 0){
                 tie = false;
             }
-            //check horizontal and add to string
+            // add horizontal to string
             if(row === tokenRow){
-                testString+= boardArray[tokenRow][column];
+                testString+= this.boardArray[tokenRow][column];
             }
-            //check vertical and add
+            //add vertical to string
             if(column === parseInt(tokenColumn)){
-                verticalString += boardArray[row][tokenColumn];
+                verticalString += this.boardArray[row][tokenColumn];
             }
-
         }
     }
     testString += verticalString + diagStringUpward + diagStringDownward;
-    console.log('array', boardArray, 'testString', testString);
-
-    changePlayer();
-    if(tie){
-        return 'tie';
-    }
-    else if(testString.indexOf(playerWin) !== -1){
-        return 'win';
-    }
-    else{
+    console.log('array', this.boardArray, 'testString', testString);
+    //CHANGE LOCATION OF CHANGE PLAYER
+        //this.changePlayer();
+        if(tie){
+            return 'tie';
+        }
+        else if(testString.indexOf(playerWin) !== -1){
+            return 'win';
+        }
+        else{
             console.log('not a win');
         }
-}
-
-
-function disableColumn(column)
-{
+    },
+    disableColumn: function(column)
+    {
         $('.column' + column).attr('class','disableClicks');
+    },
+    changePlayer: function (){
+    if(this.playerTurn === 1){
+        this.playerTurn = 2;
+        $(".tokenHoverContainer img").attr('src', 'assets/token' + player2.tokenNumber + '.png');
+        $(".player2").css({
+            'font-weight': 'bold',
+            // 'border': '3px solid rgba(169, 166, 166, .5)',
+            'background-color': 'rgba(75, 189, 271, .7)',
+            'font-size': '1.5rem',
+            'padding-top': '2%',
+        })
+        $(".player1").css({
+            'font-weight': 'normal',
+            'background-color': 'rgba(75, 189, 271, .4)',
+            'border': 'none',
+            'font-size': '1rem',
+            'padding-top': '3%',
+        })
+    } else{
+        this.playerTurn = 1;
+        $(".tokenHoverContainer img").attr('src', 'assets/token' + player1.tokenNumber + '.png');
+        $(".player1").css({
+            'font-weight': 'bold',
+            // 'border': '3px solid rgba(169, 166, 166, .5)',
+            'background-color': 'rgba(75, 189, 271, .7)',
+            'font-size': '1.5rem',
+            'padding-top': '2%',
+        })
+        $(".player2").css({
+            'font-weight': 'normal',
+            'background-color': 'rgba(75, 189, 271, .4)',
+            'border': 'none',
+            'font-size': '1rem',
+            'padding-top': '3%',
+        })
+
+    }
+    console.log('we changed player and player is', this.playerTurn);
 }
+};
