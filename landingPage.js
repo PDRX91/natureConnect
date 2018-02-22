@@ -11,14 +11,15 @@ var landingPage = {
 	getBestOf: function() {
 			var bestOf = $('.bestOfOptions option:selected').val();
 			this.playTo = bestOf;
+			$('.playTo') = bestOf;
 			// console.log(playTo);
 	},
 	setPlayerTokenImg: function() {
-		var imgPath = $(this).css('background-image');
-		console.log(imgPath);
+		var imgPath = $(event.target).css('background-image');
+		// console.log(imgPath);
 		var fileName = imgPath.split('/').pop().split('"');
-		var url = 'url("assets/Img/' + fileName[0] +'")';
-		// console.log(url);
+		var url = 'url("assets/' + fileName[0] +'")';
+		console.log('fileName',fileName[0]);
 		if (this.playerImg1 === null) {
 			this.playerImg1 = url;
 			this.token1 = url.match(/\d+/)[0];

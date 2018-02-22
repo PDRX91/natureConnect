@@ -11,13 +11,19 @@ function initializeApp(){
     // player1 = new Player('ai', 1, 1);
     // player2 = new Player('ai', 2, 3);
     board.createBoard();
-    $('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
+    // $('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
 }
 
 function clickHandler(){
-    $('.tokens>div').on('click', landingPage.setPlayerTokenImg);
-    $('.bestOfOptions').change(landingPage.getBestOf);
-    $('.startBtn').on('click', landingPage.hideLanding);
+    $('.tokens>div').on('click', function(){
+        landingPage.setPlayerTokenImg.bind(landingPage);
+    });
+    $('.bestOfOptions').change(function(){
+        landingPage.getBestOf.bind(landingPage);
+    });
+    $('.startBtn').on('click', function(){
+        landingPage.hideLanding.bind(landingPage);
+    });
     $('.gameboard > div').click(processMove);
     $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);
 }
