@@ -23,7 +23,9 @@ body {
     height:100vh;
     background-image: url("assets/Img/scenery-pictures-3.jpg");
     background-size: cover;
+    /*background-repeat: no-repeat;*/
 }
+
 h1{
     margin: 0;
     font-size: 3rem;
