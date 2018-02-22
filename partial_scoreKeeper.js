@@ -1,6 +1,6 @@
 // var bestOf = $('bestOfOptions option:selected').text();
 
-$(document).ready(app);
+$(document).ready(getBestOf);
 
 // function app() {
 // 	$('.bestOfSet').on('click', function() {
@@ -9,9 +9,9 @@ $(document).ready(app);
 // 	})
 // }
 
-function app() {
-var bestOf = $('#bestOfOptions option:selected').val();
-	$('#bestOfOptions').on('change', function() {
-		console.log('best of', bestOf);
+function getBestOf() {
+$('.bestOfSet').on('click', function() {
+	var bestOf = $('#bestOfOptions option:selected').val();
+	console.log('best of', bestOf);
 	})
 }
