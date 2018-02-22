@@ -26,8 +26,13 @@ body {
 }
 h1{
     margin: 0;
-    font-size: 2rem;
+    font-size: 3rem;
 }
+
+.statsContainer h1 span {
+    font-size: 3rem;
+}
+
 *{
     box-sizing:border-box;
 }
