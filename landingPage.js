@@ -14,18 +14,18 @@ var landingPage = {
 			// console.log(playTo);
 	},
 	setPlayerTokenImg: function() {
-		var imgPath = $(this).css('background-image');
+		var imgPath = $(event.target).css('background-image');
 		console.log(imgPath);
 		var fileName = imgPath.split('/').pop().split('"');
 		var url = 'url("assets/Img/' + fileName[0] +'")';
 		// console.log(url);
 		if (this.playerImg1 === null) {
 			this.playerImg1 = url;
-			this.token1 = url.match(/\d+/)[0];
+            this.token1 = url.match(/\d+/)[0];
 			$('.playerImg1').css('background-image', url);
 		} else {
-			this.playerImg2 = url;
-			this.token2 = url.match(/\d+/)[0];
+            this.playerImg2 = url;
+            this.token2 = url.match(/\d+/)[0];
 			$('.playerImg2').css('background-image', url);
 			$('.tokens>div').off();
 		}
@@ -39,8 +39,9 @@ var landingPage = {
   	hideLanding: function() {
 		$('.landingPage').fadeOut('slow');
 		$('.mainPage').fadeIn('slow');
-		player1 = new Player(playerName1, 1, token1);
-    	player2 = new Player('ai', 2, 3);
+		this.setName();
+		player1 = new Player(this.playerName1, 1, this.token1);
+    	player2 = new Player(this.playerName2, 2, this.token2);
 	}
 
 }

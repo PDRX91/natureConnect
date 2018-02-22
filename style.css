@@ -363,4 +363,6 @@ div.playTo > p {
 .disableClicks{
     pointer-events: none;
 }
-
+.hide{
+    display:none;
+}

@@ -54,10 +54,10 @@ var tokenAnimation = {
                 console.log('re-adding clicks');
                 $('div.gameContainer').removeClass('disableClicks');
                 board.changePlayer();
-                if(player1.name === 'ai' && player2.name === 'ai'){
+                if(player1.name === 'AI' && player2.name === 'AI'){
                     moveAi();
                 }
-                else if(player2.name === 'ai' && activePlayer.playerNumber === 1){
+                else if(player2.name === 'AI' && activePlayer.playerNumber === 1){
                     moveAi();
                 }
             }
@@ -73,7 +73,7 @@ var tokenAnimation = {
     showFauxToken:function (that){
     var currentHoveredClass = $(that).attr('class');
     var currentColumn = currentHoveredClass.substr(0,7);
-    var hoverSelector = "." + currentColumn + " img.faux"
+    var hoverSelector = "." + currentColumn + " img.faux";
     $(hoverSelector).css('display', 'inline-block');
     },
     hideFauxToken:function (column){
