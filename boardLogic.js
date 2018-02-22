@@ -13,13 +13,14 @@ function updateBoardArray(row, column, currentPlayer){
     for(var i = boardArray.length - 1; i >= 0; i--){
         if(boardArray[i][column] === 0){
             boardArray[i][column] = currentPlayer;
-            checkWinCondition(row, column, currentPlayer);
+            checkWinCondition(i, column, currentPlayer);
             return i;
         }
+
     }
 }
 function checkWinCondition(row, column, currentPlayer){
-    console.log('checking win at row', row, ' column', column);
+    console.log('checking win on ', row, column);
     //check horizontal
     var won = true;
     var playerWin = currentPlayer.toString() +
@@ -53,11 +54,17 @@ function checkWinCondition(row, column, currentPlayer){
     testString += diagStringUpward + diagStringDownward;
     console.log('array', boardArray, 'testString', testString);
     if(testString.indexOf(playerWin) !== -1){
-        console.log('player ' + currentPlayer + ' won');
         winScreen(currentPlayer);
     }
     else{
         console.log('not a win');
     }
     changePlayer();
+}
+
+
+function disableColumn(column)
+{
+        console.log('disabled column', column);
+        $('.column' + column).attr('class','disableClicks');
 }
