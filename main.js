@@ -8,15 +8,16 @@ var player2 = null;
 function initializeApp(){
     clickHandler();
     // player(name, number, tokenNumber)/
-    player1 = new Player('ai', 1, 1);
-    player2 = new Player('ai', 2, 3);
+    // player1 = new Player('ai', 1, 1);
+    // player2 = new Player('ai', 2, 3);
     board.createBoard();
     $('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
 }
 
 function clickHandler(){
-    $('.tokens>div').on('click', setPlayerTokenImg);
-    $('.bestOfOptions').change(getBestOf);
+    $('.tokens>div').on('click', landingPage.setPlayerTokenImg);
+    $('.bestOfOptions').change(landingPage.getBestOf);
+    $('.startBtn').on('click', landingPage.hideLanding);
     $('.gameboard > div').click(processMove);
     $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);
 }
