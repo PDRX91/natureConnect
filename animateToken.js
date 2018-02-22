@@ -31,6 +31,9 @@ function moveToken(row, col, playerNumber) {
             token.css('display','none');
             token.remove();
             stopHover = 'no';
+            if(row === 0){
+                disableColumn(col);
+            }
         });
 }
 
