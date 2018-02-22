@@ -1,12 +1,17 @@
 html {
     font-size: 3vmin;
+
+}
+@font-face{
+    src: url('assets/Nature.ttf');
+    font-family: nature;
 }
 
 html * {
     margin: 0;
     padding: 0;
     font-size: 0;
-    font-family: Arial;
+    font-family: nature;
     box-sizing: border-box;
 }
 
@@ -31,6 +36,7 @@ body {
     font-size: 2rem;
     background-color:limegreen;
     text-align:center;
+    padding-top: 2%;
 }
 
 .statsContainer{
@@ -38,9 +44,10 @@ body {
     height: 90%;
     background-color: blue;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     vertical-align: top;
+    padding-top: 2%;
 }
 
 .mainContainer{
@@ -62,7 +69,7 @@ body {
     border: 3px solid black;
     font-weight: bold;
     font-size: 1.5rem;
-    padding-top: 1%;
+    padding-top: 2%;
 }
 
 .player2{
@@ -75,7 +82,7 @@ body {
 .player1, .player2{
     /* border:1px solid black; */
     height:90%;
-    width: 33%;
+    width: 49%;
     display: inline-block;
     text-align:center;
     /* font-size: 1rem; */
@@ -132,7 +139,6 @@ body {
 
 }
 
-
 #tokenActive {
     position:relative;
     /*height:;*/
@@ -142,18 +148,17 @@ body {
     #transform:translateX(25%);
 }
 
-
 .fauxToken{
     height:100%;
     transform:translateX(25%);
 }
 
 .winBox{
-    height: 10%;
-    width: 50%;
+    height: 13%;
+    width: 80%;
     margin: auto;
     border: 1px solid black;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 /*.activeTokenDiv{*/
