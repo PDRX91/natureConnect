@@ -10,6 +10,8 @@ function initializeApp(){
 function clickHandler(){
     $('.gameboard > div').click(processClick);
     $(".gameboard > div").hover(checkShowFauxToken, hideFauxToken);
+    $('.tokens>div').on('click', setPlayerTokenImg);
+
 }
 
 function processClick(){
