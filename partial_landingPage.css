@@ -1,0 +1,31 @@
+html {
+    font-size: 3vmin;
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+body {
+    width:100vw;
+    height:100vh;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.landingPage {
+
+}
+
+.landingMain {
+ 	border: 1px solid red;
+ 	width: 90%;
+ 	height: 100%;
+ 	margin: 0 auto;
+}
