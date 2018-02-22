@@ -24,9 +24,9 @@ function moveToken(row, col, playerNumber) {
     var target = $('.column' + col + '.row' + row);
     var rowPosition = target.position().top - $('#tokenActive').position().top;
     var colPosition = target.position().left;
-    stopHover = 'yes';
+    $('div.gameContainer').addClass('disableClicks');
     token.animate({top: rowPosition},
-        duration, 'linear', function(){
+        duration, 'easeOutBounce', function(){
             changeToFaux(row, col, playerNumber);
             token.css('display','none');
             token.remove();
@@ -34,6 +34,7 @@ function moveToken(row, col, playerNumber) {
             if(row === 0){
                 disableColumn(col);
             }
+            $('div.gameContainer').removeClass('disableClicks');
         });
 }
 
