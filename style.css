@@ -1,6 +1,6 @@
 html {
     font-size: 3vmin;
-
+    overflow: hidden;
 }
 
 html * {
@@ -323,6 +323,9 @@ div.playTo > p {
 
 .winMsg {
     height: 18%;
+    width: 138%;
+    position: absolute;
+    right: -28%;
 }
 
 #tokenActive {
