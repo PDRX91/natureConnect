@@ -74,7 +74,7 @@ function resultScreen(result) {
     else {
         if(player1.name === 'AI' && player2.name === 'AI'){
             var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' ' + activePlayer.playerNumber + ' wins this round!');
-        } else{
+        } else {
             var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' wins this round!');
             if (activePlayer.playerNumber === 1) {
                 player1.gameWon++;
@@ -86,9 +86,9 @@ function resultScreen(result) {
                 } else if (activePlayer.playerNumber === 2) {
                 player2.gameWon++;
                 $('.playerDisplay2').text(player2.gameWon);
-                if (serieLength > 1 && player1.gameWon > serieLength/2.0) {
+                if (serieLength > 1 && player2.gameWon > serieLength/2.0) {
                     setTimeout(1000, function(){
-                    $('.winMsg .winBox').text(player1.name + ' has won the serie!');
+                    $('.winMsg .winBox').text(player2.name + ' has won the serie!');
                      });
                 }
             }
