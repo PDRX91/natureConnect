@@ -1,18 +1,12 @@
 $(document).ready(initializeApp);
-//var playerTurn = 1;
-// var stopHover = 'no';
+
 var activePlayer = null;
 var player1 = null;
 var player2 = null;
 
 function initializeApp(){
     clickHandler();
-    // player(name, number, tokenNumber)/
-    // player1 = new Player('ai', 1, 1);
-    // player2 = new Player('ai', 2, 3);
     board.createBoard();
-
-    //$('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
 }
 function clickHandler(){
     $('.bestOfOptions').change(function(){
@@ -32,7 +26,6 @@ function clickHandler(){
 }
 
 function processMove(){
-
     var classes = $(this).attr('class');
     var column = classes.charAt(6);
     var row = classes.charAt(11);
@@ -49,7 +42,6 @@ function processMove(){
     //tokenAnimation is processing logic after token drop. e.g.
     // player switching and win checking
     tokenAnimation.moveToken(placementRow, column, activePlayer.playerNumber, activePlayer.tokenNumber);
-
 }
 
 class Player{
@@ -62,8 +54,8 @@ class Player{
         this.status = 'inactive';
         $('.player' + playerNumber).css('background-image', 'url(assets/token' + tokenNumber + '.png)')
     }
-
 }
+
 function resultScreen(result) {
     console.log('this is our result', result);
     var seriesLength = parseInt($('.playToNumber').text());
@@ -96,7 +88,6 @@ function resultScreen(result) {
                      }, 1000);
                 }
             }
-
         }
         $('.winMsg').append(winBox);
     }

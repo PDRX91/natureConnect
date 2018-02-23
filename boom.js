@@ -1,5 +1,3 @@
-var currentRow;
-var currentColumn;
 var appendingParent
     
 function spawnParticle(transform, delay, lifeTime){ 
@@ -13,9 +11,7 @@ function spawnParticle(transform, delay, lifeTime){
         function killMe(){
             boom.remove();
         }
-        // debugger;
         $(appendingParent).append(boom);
-        debugger;
         function GO(){
             boom.css({
                 left: transform.x+'%',
@@ -44,6 +40,5 @@ function explode(row, col, initialDelay){
 
 function random(min=0, max=100){
     var num = Math.floor(Math.random() * (max-min)) - min;
-
     return num * (Math.round(Math.random())*2-1)
 }

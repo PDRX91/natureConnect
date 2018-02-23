@@ -3,12 +3,6 @@ html {
 
 }
 
-/*@font-face{
-    src: url('assets/Nature.ttf');
-    font-family: nature;
-}*/
-
-
 html * {
     margin: 0;
     padding: 0;
@@ -23,7 +17,6 @@ body {
     height:100vh;
     background-image: url("assets/scenery-pictures-3.jpg");
     background-size: cover;
-    /*background-repeat: no-repeat;*/
 }
 
 h1{
@@ -35,7 +28,6 @@ h1{
     box-sizing:border-box;
 }
 
-/*landing page*/
 .landingPage {
     /*border: 1px solid red;*/
     width:100vmin;
@@ -47,14 +39,12 @@ h1{
     height:10%;
     width:100%;
     font-size: 2rem;
-    /*background-color:limegreen;*/
     text-align:center;
 }
 
 .landingBody {
     height:90%;
     width:100%;
-    /*background-color: grey;*/
 }
 
 .landingPlayer {
@@ -138,7 +128,6 @@ div.playTo > p {
 .tokens div {
     height: 46%;
     width: 34%;
-    /*border: 1px dashed yellow;*/
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -189,7 +178,6 @@ div.playTo > p {
     box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
 }
 
-/*main page*/
 .mainPage{
     width:100vmin;
     height:100vmin;
@@ -200,15 +188,12 @@ div.playTo > p {
     height:10%;
     width:100%;
     font-size: 2rem;
-    /* background-color:limegreen; */
     text-align:center;
-    /*padding-top: 2%;*/
 }
 
 .statsContainer{
     width: 20%;
     height: 90%;
-    /* background-color: blue; */
     display: inline-block;
     font-size: 1rem;
     text-align: center;
@@ -225,10 +210,7 @@ div.playTo > p {
     font-size: 2rem;
     margin-top: 5%;
 }
-/*
-.statsContainer * {
-    font-size: 1rem;
-}*/
+
 .resetBtn {
     width: 80%;
     height: 10%;
@@ -240,9 +222,7 @@ div.playTo > p {
     position: absolute;
     bottom: 30%;
     left: 2%;
-    /*background-color: (75, 189, 271, .3)*/
 }
-
 
 .mainContainer{
     width:80%;
@@ -253,20 +233,17 @@ div.playTo > p {
 .playerContainer{
     height: 10%;
     width: 100%;
-    /* background-color: red; */
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .player1{
-    /* border: 3px solid rgba(169, 166, 166, .5); */
     background-color: rgba(75, 189, 271, .7);
     font-weight: bold;
     font-size: 1.5rem;
     padding-top: 2%;
     padding-left: 2%;
-    /*background-image: url('assets/token1.png');*/
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -279,17 +256,15 @@ div.playTo > p {
     vertical-align: center;
     padding-top:3%;
     padding-left: 2%;
-    /*background-image: url('assets/token2.png');*/
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 .player1, .player2{
-    /* border:1px solid black; */
     height:90%;
     width: 49%;
     display: inline-block;
     text-align:center;
-    /* font-size: 1rem; */
 }
 
 .gameContainer{
@@ -318,10 +293,12 @@ div.playTo > p {
 .tokenHoverContainer  img{
     height: 100%;
 }
+
 .faux{
     display:none;
     height:100%;
 }
+
 .gameboard{
     width: 84%;
     height: 84.5%;
@@ -350,11 +327,7 @@ div.playTo > p {
 
 #tokenActive {
     position:relative;
-    /*height:;*/
     height:100%;
-    /*height:100%; !important;*/
-    /*Fix the important later~~~~~~~~~~*/
-    
 }
 
 .fauxToken{
@@ -369,23 +342,20 @@ div.playTo > p {
     font-size: 2.5rem;
     text-align: center;
 }
-/*.activeTokenDiv{*/
-    /*position:relative;*/
-    /*width:100%;*/
-    /*height:100%;*/
-/*}*/
+
 .disableClicks{
     pointer-events: none;
 }
 
 .particle {
 	position: absolute;
-    width: 3px; height: 2px;
+    width: 2px; height: 2px;
     left: 50%;
     top: 100%;
     transition-timing-function: linear;
     z-index: 50;
 }
+
 .hide{
     display:none;
 }

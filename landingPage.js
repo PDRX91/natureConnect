@@ -1,5 +1,3 @@
-//for the landing page
-
 var landingPage = {
 	playerName1: 'AI',
 	playerName2: 'AI',
@@ -12,6 +10,7 @@ var landingPage = {
 			var bestOf = $('.bestOfOptions option:selected').val();
 			$('.playToNumber').text(bestOf);
 	},
+
 	setPlayerTokenImg: function() {
 		var imgPath = $(event.target).css('background-image');
 		var fileName = imgPath.split('/').pop().split('"');
@@ -29,6 +28,7 @@ var landingPage = {
 		}
 		$(this).css('opacity', '0');
 	},	
+
 	setName: function() {
 		this.playerName1 = $('.playerName1').val() || 'AI';
 		this.playerName2 = $('.playerName2').val() || 'AI';
@@ -41,5 +41,4 @@ var landingPage = {
 		player1 = new Player(this.playerName1, 1, this.token1);
     	player2 = new Player(this.playerName2, 2, this.token2);
 	}
-
 }
