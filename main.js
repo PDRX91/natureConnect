@@ -8,8 +8,8 @@ var player2 = null;
 function initializeApp(){
     clickHandler();
     // player(name, number, tokenNumber)/
-    player1 = new Player('ai', 1, 1);
-    player2 = new Player('ai', 2, 3);
+    player1 = new Player('John', 1, 1);
+    player2 = new Player('Mary', 2, 3);
     board.createBoard();
     $('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
 }

@@ -29,9 +29,11 @@ var tokenAnimation = {
     var target = $('.column' + col + '.row' + row);
     var rowPosition = target.position().top - $('#tokenActive').position().top;
     //var colPosition = target.position().left;
+    setTimeout(() => {explode(row, col, duration-500)});
     $('div.gameContainer').addClass('disableClicks');
     token.animate({top: rowPosition},
         duration, 'easeOutBounce', function(){
+            // debugger;
             that.changeToFaux(row, col, playerNumber, playerToken);
             token.css('display','none');
             token.remove();
