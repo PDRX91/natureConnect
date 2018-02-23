@@ -47,14 +47,14 @@ h1{
     height:10%;
     width:100%;
     font-size: 2rem;
-    background-color:limegreen;
+    /*background-color:limegreen;*/
     text-align:center;
 }
 
 .landingBody {
     height:90%;
     width:100%;
-    background-color: grey;
+    /*background-color: grey;*/
 }
 
 .landingPlayer {
@@ -74,13 +74,13 @@ div.player1Img, div.player2Img {
 }
 
 .landingPlayer p, .landingPlayer input, .landingPlayer button {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .landingPlayer input {
     width: 60%;
-    margin: 0 5%;
+    margin: 0 20%;
     background-color: blue;
 }
 
@@ -99,9 +99,18 @@ div.playTo {
 }
 
 div.playTo > select, div.playTo > p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     display: inline-block;
+    margin: 1% 2%;
     color: brown;
+}
+
+div.playTo > p {
+    margin-left: 10%;
+}
+
+span.playToNumber {
+    font-size: 1rem;
 }
 
 .others {
@@ -125,7 +134,7 @@ div.playTo > p {
 .tokens div {
     height: 46%;
     width: 34%;
-    border: 1px dashed yellow;
+    /*border: 1px dashed yellow;*/
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -161,12 +170,13 @@ div.playTo > p {
 }
 
 .startBtn {
-    font-size: 1rem;
-    color: green;
     display: inline-block;
     width: 15%;
     height: 100%;
-    border-radius: 25%;
+    color: darkgreen;
+    border-radius: 20%;
+    background: rgba(75, 189, 271, .3);
+    font-size: 1rem;
 }
 
 .startBtn:hover {
