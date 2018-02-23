@@ -2,25 +2,63 @@
 <html lang="en">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">   
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <script src="singlePlayerMode.js"></script>
+    <script src="landingPage.js"></script>
     <script src = 'boardLogic.js'></script>
     <script src = 'boom.js'></script>
     <script src ='animateToken.js'></script>
     <script src="main.js"></script>
-
     <link rel="stylesheet" href="style.css">
     <title>Connect 4</title>
 </head>
 <body>
-    <div class="landingPage" style="display:none"></div>
-    <div class="mainPage">
+    <div class="landingPage">
+        <div class="landingHeader">CONNECT FOUR</div>
+        <div class="landingBody">
+            <div class="landingPlayer">
+                <div>
+                    <input type="text" placeholder="Player1" class="playerName1">
+                    <!-- <button class="setPlayer1">set1</button> -->
+                </div>
+                <div>
+                    <input type="text" placeholder="Player2" class="playerName2">
+                    <!-- <button class="setPlayer2">set2</button> -->
+                </div>
+                <div class="playerImg1"></div>
+                <div class="playerImg2"></div>
+                <div class="playTo">
+                    <p>Playing for Best of</p>
+                    <select name ='bestOf' class="bestOfOptions">
+                        <option value="1" class="others">1</option>
+                        <option value="3" class="others">3</option>
+                        <option value="5" class="others">5</option>
+                        <option value="7" class="others">7</option>
+                        <option value="9" class="others">9</option>
+                        <option value="11" class="others">11</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tokens">
+                <div class="token1"></div>
+                <div class="token2"></div>
+                <div class="token3"></div>
+                <div class="token4"></div>
+            </div>
+            <div class="start">
+                <button class="startBtn">Start!</button>
+            </div>
+        </div>
+    </div>
+    <div class="mainPage hide">
         <div class="header">
             <h1>CONNECT FOUR</h1>
         </div>
         <div class="statsContainer">
-            <p>Playing for Best of <span class="playTo">1</span> </p>
+            <p>Playing for Best of <span class="playToNumber">1</span> </p>
             <h1><span class="playerDisplay1">0</span> to <span class="playerDisplay2">0</span></h1>
+            <button class="resetBtn">Reset</button>
         </div>
         <div class="mainContainer">
             <div class="playerContainer">

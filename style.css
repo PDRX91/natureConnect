@@ -21,15 +21,13 @@ html * {
 body {
     width:100vw;
     height:100vh;
-    background-image: url("assets/Img/scenery-pictures-3.jpg");
+    background-image: url("assets/scenery-pictures-3.jpg");
     background-size: cover;
-}
-h1{
-    margin: 0;
-    font-size: 3rem;
+    /*background-repeat: no-repeat;*/
 }
 
-.statsContainer h1 span {
+h1{
+    margin: 0;
     font-size: 3rem;
 }
 
@@ -37,14 +35,157 @@ h1{
     box-sizing:border-box;
 }
 
+/*landing page*/
 .landingPage {
-
+    border: 1px solid red;
+    width:100vmin;
+    height:100vmin;
+    margin: 0 auto;
 }
 
-.landingMain {
-
+.landingHeader {
+    height:10%;
+    width:100%;
+    font-size: 2rem;
+    /*background-color:limegreen;*/
+    text-align:center;
 }
 
+.landingBody {
+    height:90%;
+    width:100%;
+    /*background-color: grey;*/
+}
+
+.landingPlayer {
+    height: 40%;
+    border: 1px dashed blue;
+}
+
+.landingPlayer > div {
+    width: 50%;
+    height: 20%;
+    display: inline-block;
+    border: 1px dashed blue;
+}
+
+div.player1Img, div.player2Img {
+    height: 60%;
+}
+
+.landingPlayer p, .landingPlayer input, .landingPlayer button {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.landingPlayer input {
+    width: 60%;
+    margin: 0 20%;
+    background-color: blue;
+}
+
+.playerImg1, .playerImg2 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.playTo {
+    width: 80%;
+    height: 20%;
+    display: block;
+    margin: 0 auto;
+    border: 1px dashed green;
+}
+
+div.playTo > select, div.playTo > p {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 1% 2%;
+    color: brown;
+}
+
+div.playTo > p {
+    margin-left: 10%;
+}
+
+span.playToNumber {
+    font-size: 1rem;
+}
+
+.others {
+    color: brown;
+}
+
+div.playTo > p {
+    padding-left:  15%;
+    padding-right: 2%;
+}
+
+.tokens {
+    height: 40%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.tokens div {
+    height: 46%;
+    width: 34%;
+    /*border: 1px dashed yellow;*/
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.tokens div:hover {
+    -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
+    -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
+    box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
+}
+
+.token1 {
+    background-image: url(assets/token1.png);
+}
+
+.token2 {
+    background-image: url(assets/token2.png);
+}
+
+.token3 {
+    background-image: url(assets/token3.png);
+}
+
+.token4 {
+    background-image: url(assets/token5.png);
+}
+
+.start {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.startBtn {
+    display: inline-block;
+    width: 15%;
+    height: 100%;
+    color: darkgreen;
+    border-radius: 20%;
+    background: rgba(75, 189, 271, .3);
+    font-size: 1rem;
+}
+
+.startBtn:hover {
+    -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
+    -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
+    box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
+}
+
+/*main page*/
 .mainPage{
     width:100vmin;
     height:100vmin;
@@ -69,12 +210,34 @@ h1{
     text-align: center;
     vertical-align: top;
     padding-top: 2%;
+    position: relative;
 }
 
-.statsContainer * {
+.statsContainer > p {
     font-size: 1rem;
 }
 
+.statsContainer h1 span {
+    font-size: 2rem;
+    margin-top: 5%;
+}
+/*
+.statsContainer * {
+    font-size: 1rem;
+}*/
+.resetBtn {
+    width: 80%;
+    height: 10%;
+    color: darkgreen;
+    border-radius: 20%;
+    background: rgba(75, 189, 271, .3);
+    font-size: 1rem;
+    display: inline-block;
+    position: absolute;
+    bottom: 30%;
+    left: 2%;
+    /*background-color: (75, 189, 271, .3)*/
+}
 
 
 .mainContainer{
@@ -187,7 +350,7 @@ h1{
     height:100%;
     /*height:100%; !important;*/
     /*Fix the important later~~~~~~~~~~*/
-    #transform:translateX(25%);
+    
 }
 
 .fauxToken{
@@ -218,4 +381,7 @@ h1{
     top: 100%;
     transition-timing-function: linear;
     z-index: 50;
+}
+.hide{
+    display:none;
 }
