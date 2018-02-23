@@ -37,7 +37,7 @@ h1{
 
 /*landing page*/
 .landingPage {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width:100vmin;
     height:100vmin;
     margin: 0 auto;
@@ -59,14 +59,14 @@ h1{
 
 .landingPlayer {
     height: 40%;
-    border: 1px dashed blue;
+    /*border: 1px dashed blue;*/
 }
 
 .landingPlayer > div {
     width: 50%;
     height: 20%;
     display: inline-block;
-    border: 1px dashed blue;
+    /*border: 1px dashed blue;*/
 }
 
 div.player1Img, div.player2Img {
@@ -95,7 +95,7 @@ div.playTo {
     height: 20%;
     display: block;
     margin: 0 auto;
-    border: 1px dashed green;
+    /*border: 1px dashed green;*/
 }
 
 div.playTo > select, div.playTo > p {
