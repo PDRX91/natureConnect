@@ -59,7 +59,6 @@ var board = {
         }
     }
     testString += verticalString + diagStringUpward + diagStringDownward;
-    console.log('array', this.boardArray, 'testString', testString);
     //CHANGE LOCATION OF CHANGE PLAYER
         if(tie){
             return 'tie';
@@ -68,7 +67,6 @@ var board = {
             return 'win';
         }
         else{
-            console.log('not a win');
         }
     },
     disableColumn: function(column)
@@ -110,7 +108,6 @@ var board = {
         })
 
     }
-    console.log('we changed player and player is', this.playerTurn);
     },
     resetBoard: function(){
         this.boardArray = [];

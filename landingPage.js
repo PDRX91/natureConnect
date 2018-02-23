@@ -15,7 +15,6 @@ var landingPage = {
 		var imgPath = $(event.target).css('background-image');
 		var fileName = imgPath.split('/').pop().split('"');
 		var url = 'url("assets/' + fileName[0] +'")';
-		console.log('fileName',fileName[0]);
 		if (this.playerImg1 === null) {
 			this.playerImg1 = url;
             this.token1 = url.match(/\d+/)[0];

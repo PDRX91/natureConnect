@@ -26,7 +26,6 @@ function spawnParticle(transform, delay, lifeTime){
     
 function explode(row, col, initialDelay){
     appendingParent = ".column"+col+".row"+row;
-    console.log(appendingParent);
     if(row===5){
         return;
     }
