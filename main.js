@@ -93,7 +93,7 @@ function resultScreen(result) {
                 }
             }
         }
-        $('.winMsg').append(winBox);
         }
+        $('.winMsg').append(winBox);
     }
 }
