@@ -66,7 +66,7 @@ class Player{
 }
 function resultScreen(result) {
     console.log('this is our result', result);
-    var serieLength = parseInt($('.playToNumber').text());
+    var seriesLength = parseInt($('.playToNumber').text());
     if (result === 'tie') {
         var winBox = $("<div>").addClass('winBox').text('Tie Game...');
         $('.winMsg').append(winBox);
@@ -79,20 +79,24 @@ function resultScreen(result) {
             if (activePlayer.playerNumber === 1) {
                 player1.gameWon++;
                 $('.playerDisplay1').text(player1.gameWon);
-                if (serieLength > 1 && player1.gameWon > serieLength/2.0) {
-                    setTimeout(1000, function(){
-                        $('.winMsg .winBox').text(player1.name + ' has won the serie!');
-                    });
-                } else if (activePlayer.playerNumber === 2) {
-                player2.gameWon++;
-                $('.playerDisplay2').text(player2.gameWon);
-                if (serieLength > 1 && player2.gameWon > serieLength/2.0) {
-                    setTimeout(1000, function(){
-                    $('.winMsg .winBox').text(player2.name + ' has won the serie!');
-                     });
+                if (seriesLength > 1 && player1.gameWon > seriesLength/2.0) {
+                    console.log('in here', player1.gameWon);
+                    setTimeout(function(){
+                        $('.winMsg .winBox').text(player1.name + ' won the series!');
+                    },1000);
                 }
             }
-        }
+            else if (activePlayer.playerNumber === 2) {
+                player2.gameWon++;
+                $('.playerDisplay2').text(player2.gameWon);
+                if (seriesLength > 1 && player2.gameWon > seriesLength/2.0) {
+                    console.log('in here', player2.gameWon);
+                    setTimeout(function(){
+                    $('.winMsg .winBox').text(player2.name + ' won the series!');
+                     }, 1000);
+                }
+            }
+
         }
         $('.winMsg').append(winBox);
     }

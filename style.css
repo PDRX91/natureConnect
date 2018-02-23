@@ -77,7 +77,7 @@ div.player1Img, div.player2Img {
 }
 
 .landingPlayer p, .landingPlayer input, .landingPlayer button {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     color: lightblue;
 }
