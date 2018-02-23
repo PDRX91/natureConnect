@@ -1,18 +1,12 @@
 $(document).ready(initializeApp);
-//var playerTurn = 1;
-// var stopHover = 'no';
+
 var activePlayer = null;
 var player1 = null;
 var player2 = null;
 
 function initializeApp(){
     clickHandler();
-    // player(name, number, tokenNumber)/
-    // player1 = new Player('ai', 1, 1);
-    // player2 = new Player('ai', 2, 3);
     board.createBoard();
-
-    //$('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
 }
 function clickHandler(){
     $('.bestOfOptions').change(function(){
@@ -32,7 +26,6 @@ function clickHandler(){
 }
 
 function processMove(){
-
     var classes = $(this).attr('class');
     var column = classes.charAt(6);
     var row = classes.charAt(11);
@@ -49,7 +42,6 @@ function processMove(){
     //tokenAnimation is processing logic after token drop. e.g.
     // player switching and win checking
     tokenAnimation.moveToken(placementRow, column, activePlayer.playerNumber, activePlayer.tokenNumber);
-
 }
 
 class Player{
@@ -62,11 +54,11 @@ class Player{
         this.status = 'inactive';
         $('.player' + playerNumber).css('background-image', 'url(assets/token' + tokenNumber + '.png)')
     }
-
 }
+
 function resultScreen(result) {
     console.log('this is our result', result);
-    var serieLength = parseInt($('.playToNumber').text());
+    var seriesLength = parseInt($('.playToNumber').text());
     if (result === 'tie') {
         var winBox = $("<div>").addClass('winBox').text('Tie Game...');
         $('.winMsg').append(winBox);
@@ -79,20 +71,20 @@ function resultScreen(result) {
             if (activePlayer.playerNumber === 1) {
                 player1.gameWon++;
                 $('.playerDisplay1').text(player1.gameWon);
-                if (serieLength > 1 && player1.gameWon > serieLength/2.0) {
+                if (seriesLength > 1 && player1.gameWon > seriesLength/2.0) {
                     setTimeout(1000, function(){
-                        $('.winMsg .winBox').text(player1.name + ' has won the serie!');
+                    $('.winMsg .winBox').text(player1.name + ' has won the series!');
                     });
                 } else if (activePlayer.playerNumber === 2) {
-                player2.gameWon++;
-                $('.playerDisplay2').text(player2.gameWon);
-                if (serieLength > 1 && player1.gameWon > serieLength/2.0) {
-                    setTimeout(1000, function(){
-                    $('.winMsg .winBox').text(player1.name + ' has won the serie!');
-                     });
+                    player2.gameWon++;
+                    $('.playerDisplay2').text(player2.gameWon);
+                    if (seriesLength > 1 && player1.gameWon > seriesLength/2.0) {
+                        setTimeout(1000, function(){
+                        $('.winMsg .winBox').text(player1.name + ' has won the series!');
+                        });
+                    }
                 }
             }
-        }
         }
         $('.winMsg').append(winBox);
     }

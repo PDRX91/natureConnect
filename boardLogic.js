@@ -61,7 +61,6 @@ var board = {
     testString += verticalString + diagStringUpward + diagStringDownward;
     console.log('array', this.boardArray, 'testString', testString);
     //CHANGE LOCATION OF CHANGE PLAYER
-        //this.changePlayer();
         if(tie){
             return 'tie';
         }
@@ -82,7 +81,6 @@ var board = {
         $(".tokenHoverContainer img").attr('src', 'assets/token' + player2.tokenNumber + '.png');
         $(".player2").css({
             'font-weight': 'bold',
-            // 'border': '3px solid rgba(169, 166, 166, .5)',
             'background-color': 'rgba(75, 189, 271, .7)',
             'font-size': '1.5rem',
             'padding-top': '2%',
@@ -99,7 +97,6 @@ var board = {
         $(".tokenHoverContainer img").attr('src', 'assets/token' + player1.tokenNumber + '.png');
         $(".player1").css({
             'font-weight': 'bold',
-            // 'border': '3px solid rgba(169, 166, 166, .5)',
             'background-color': 'rgba(75, 189, 271, .7)',
             'font-size': '1.5rem',
             'padding-top': '2%',
@@ -119,8 +116,6 @@ var board = {
         this.boardArray = [];
         this.createBoard();
         $('.gameboard > div').removeAttr('style');
-        // this.playerTurn = 1;
-        // activePlayer = player1;
         if(activePlayer === player1){
             this.changePlayer();
         }
