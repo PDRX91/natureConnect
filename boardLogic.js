@@ -124,5 +124,7 @@ var board = {
         if(activePlayer === player1){
             this.changePlayer();
         }
+        $('div.gameContainer').removeClass('disableClicks');
+        $('.winMsg').text('');
     }
 };
