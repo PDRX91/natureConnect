@@ -1,13 +1,11 @@
 function moveAi(){
     var move = checkForWinAndLoss();
     var randomRow = null;
-    console.log('move is', move);
     if (move === null) {
         while (board.boardArray[0][randomRow] !== 0) {
             randomRow = Math.floor(Math.random() *
                 board.boardArray[0].length);
         }
-        console.log('row is', randomRow);
         move = randomRow;
     }
     $('.column' + move + '.row5').click();
@@ -22,7 +20,6 @@ function checkForWinAndLoss(){
             if(board.checkWinCondition(move, i, checkPlayer) === 'win'){
                 deleteSimulatedMove(move, i);
                 nextMove = i;
-                console.log('ai wants to place in this column', nextMove);
                 return nextMove;
             }
             else{
@@ -37,7 +34,6 @@ function checkForWinAndLoss(){
             if(board.checkWinCondition(move, i, checkPlayer) === 'win'){
                 deleteSimulatedMove(move, i);
                 nextMove = i;
-                console.log('ai wants to place in this column', nextMove);
                 return nextMove;
             }
             else{

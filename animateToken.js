@@ -42,14 +42,11 @@ var tokenAnimation = {
                 if(result === 'win'){
                     $('div.gameContainer').addClass('disableClicks');
                     resultScreen(playerNumber);
-                    console.log('we won');
                 }
                 else if(result === 'tie'){
-                    console.log('we tied');
                     resultScreen('tie');
                 }
                 else{
-                    console.log('re-adding clicks');
                     $('div.gameContainer').removeClass('disableClicks');
                     board.changePlayer();
                     if(player1.name === 'AI' && player2.name === 'AI'){

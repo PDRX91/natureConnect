@@ -57,7 +57,6 @@ class Player{
 }
 
 function resultScreen(result) {
-    console.log('this is our result', result);
     var seriesLength = parseInt($('.playToNumber').text());
     if (result === 'tie') {
         var winBox = $("<div>").addClass('winBox').text('Tie Game...');
@@ -72,7 +71,6 @@ function resultScreen(result) {
                 player1.gameWon++;
                 $('.playerDisplay1').text(player1.gameWon);
                 if (seriesLength > 1 && player1.gameWon > seriesLength/2.0) {
-                    console.log('in here', player1.gameWon);
                     setTimeout(function(){
                         $('.winMsg .winBox').text(player1.name + ' won the series!');
                     },1000);
@@ -82,7 +80,6 @@ function resultScreen(result) {
                 player2.gameWon++;
                 $('.playerDisplay2').text(player2.gameWon);
                 if (seriesLength > 1 && player2.gameWon > seriesLength/2.0) {
-                    console.log('in here', player2.gameWon);
                     setTimeout(function(){
                     $('.winMsg .winBox').text(player2.name + ' won the series!');
                      }, 1000);
