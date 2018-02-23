@@ -73,7 +73,7 @@ function resultScreen(result) {
     }
     else {
         if(player1.name === 'AI' && player2.name === 'AI'){
-            var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' ' + activePlayer.playerNumber + ' wins round!');
+            var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' ' + activePlayer.playerNumber + ' wins this round!');
         } else{
             var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' wins this round!');
             if (activePlayer.playerNumber === 1) {
