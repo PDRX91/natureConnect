@@ -114,5 +114,15 @@ var board = {
 
     }
     console.log('we changed player and player is', this.playerTurn);
-}
+    },
+    resetBoard: function(){
+        this.boardArray = [];
+        this.createBoard();
+        $('.gameboard > div').removeAttr('style');
+        // this.playerTurn = 1;
+        // activePlayer = player1;
+        if(activePlayer === player1){
+            this.changePlayer();
+        }
+    }
 };

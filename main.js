@@ -15,18 +15,20 @@ function initializeApp(){
     //$('img.faux').attr('src','assets/token' + player1.tokenNumber + '.png');
 }
 function clickHandler(){
-    $('.tokens>div').on('click', function(){
-
-        landingPage.setPlayerTokenImg().bind(this);
-    });
     $('.bestOfOptions').change(function(){
-        landingPage.getBestOf().bind(this);
+        landingPage.getBestOf();
     });
     $('.startBtn').on('click', function(){
-        landingPage.hideLanding().bind(this);
+        landingPage.hideLanding();
     });
     $('.gameboard > div').click(processMove);
     $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);
+    $('.tokens>div').on('click', function(){
+        landingPage.setPlayerTokenImg();
+    });
+    $('.resetBtn').on('click', function(){
+        board.resetBoard()
+    });
 }
 
 function processMove(){

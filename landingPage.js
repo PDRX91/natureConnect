@@ -11,7 +11,7 @@ var landingPage = {
 	getBestOf: function() {
 			var bestOf = $('.bestOfOptions option:selected').val();
 			this.playTo = bestOf;
-			$('.playTo') = bestOf;
+			$('.playTo').text(bestOf);
 			// console.log(playTo);
 	},
 	setPlayerTokenImg: function() {
