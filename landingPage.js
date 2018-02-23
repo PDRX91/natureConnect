@@ -15,17 +15,17 @@ var landingPage = {
 		var imgPath = $(event.target).css('background-image');
 		var fileName = imgPath.split('/').pop().split('"');
 		var url = 'url("assets/' + fileName[0] +'")';
-		if (this.playerImg1 === null) {
-			this.playerImg1 = url;
-            this.token1 = url.match(/\d+/)[0];
+		if (landingPage.playerImg1 === null) {
+			landingPage.playerImg1 = url;
+            landingPage.token1 = url.match(/\d+/)[0];
 			$('.playerImg1').css('background-image', url);
 		} else {
-            this.playerImg2 = url;
-            this.token2 = url.match(/\d+/)[0];
+            landingPage.playerImg2 = url;
+            landingPage.token2 = url.match(/\d+/)[0];
 			$('.playerImg2').css('background-image', url);
 			$('.tokens>div').off();
 		}
-		$(this).css('opacity', '0');
+		$(event.target).css('opacity', '0');
 	},	
 
 	setName: function() {

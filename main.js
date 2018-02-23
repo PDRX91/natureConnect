@@ -72,7 +72,7 @@ function resultScreen(result) {
                 $('.playerDisplay1').text(player1.gameWon);
                 if (seriesLength > 1 && player1.gameWon > seriesLength/2.0) {
                     setTimeout(function(){
-                        $('.winMsg .winBox').text(player1.name + ' won the series!');
+                        $('.winMsg .winBox').text(player1.name + ' won the series!').css('color', 'red');
                     },1000);
                 }
             }
@@ -81,7 +81,7 @@ function resultScreen(result) {
                 $('.playerDisplay2').text(player2.gameWon);
                 if (seriesLength > 1 && player2.gameWon > seriesLength/2.0) {
                     setTimeout(function(){
-                    $('.winMsg .winBox').text(player2.name + ' won the series!');
+                    $('.winMsg .winBox').text(player2.name + ' won the series!').css('color', 'red');
                      }, 1000);
                 }
             }
