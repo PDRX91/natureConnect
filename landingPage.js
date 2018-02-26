@@ -13,10 +13,12 @@ var landingPage = {
 
 	setPlayerTokenImg: function() {
 		var imgPath = $(event.target).css('background-image');
+		//what is the split part
 		var fileName = imgPath.split('/').pop().split('"');
 		var url = 'url("assets/' + fileName[0] +'")';
 		if (landingPage.playerImg1 === null) {
 			landingPage.playerImg1 = url;
+			//whats this?
             landingPage.token1 = url.match(/\d+/)[0];
 			$('.playerImg1').css('background-image', url);
 		} else {
@@ -25,6 +27,7 @@ var landingPage = {
 			$('.playerImg2').css('background-image', url);
 			$('.tokens>div').off();
 		}
+		//whats the difference between e.target and 'this'
 		$(event.target).css('opacity', '0');
 	},	
 

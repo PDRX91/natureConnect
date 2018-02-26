@@ -20,8 +20,8 @@ var tokenAnimation = {
             src:'assets/token' + playerToken + '.png',
         });
         startSquare.prepend(activeToken);
-        },
-        moveToken: function (row, col, playerNumber, playerToken) {
+    },
+    moveToken: function (row, col, playerNumber, playerToken) {
         var that = this;
         var token = $('#tokenActive');
         var duration = 300 + 100*row;
@@ -29,8 +29,10 @@ var tokenAnimation = {
         var rowPosition = target.position().top - $('#tokenActive').position().top;
         setTimeout(() => {explode(row, col, duration-500)});
         $('div.gameContainer').addClass('disableClicks');
+                        //what does top: do?
         token.animate({top: rowPosition},
             duration, 'easeOutBounce', function(){
+                //where does that come from?
                 that.changeToFaux(row, col, playerNumber, playerToken);
                 token.css('display','none');
                 token.remove();
