@@ -41,3 +41,4 @@ function random(min=0, max=100){
     var num = Math.floor(Math.random() * (max-min)) - min;
     return num * (Math.round(Math.random())*2-1)
 }
+//my first commit on the new repo!
