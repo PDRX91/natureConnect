@@ -8,7 +8,7 @@ function moveAi(){
         }
         move = randomRow;
     }
-    $('.column' + move + '.row5').click();
+    setTimeout(()=>{$('.column' + move + '.row5').click()}, 1000);
 }
 
 function checkForWinAndLoss(){
