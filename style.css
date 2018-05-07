@@ -56,7 +56,7 @@ h1{
 }
 
 ::placeholder {
-    color:white;
+    color:whitesmoke;
 }
 
 .landingPlayer > div {
@@ -80,7 +80,7 @@ div.player1Img, div.player2Img {
 .landingPlayer input {
     width: 60%;
     margin: 0 20%;
-    color: blue;
+    color: white;
     background-color: rgba(75, 189, 271, .3);
 }
 
@@ -197,6 +197,7 @@ div.playTo > p {
     width:100vmin;
     height:100vmin;
     margin: 0 auto;
+    text-shadow: 2px 3px 0px #010c10;
 }
 
 .header{
@@ -229,7 +230,7 @@ div.playTo > p {
 .resetBtn {
     width: 80%;
     height: 10%;
-    color: darkgreen;
+    color: #eaefee;
     border-radius: 20%;
     background: rgba(75, 189, 271, .3);
     font-size: 1rem;
@@ -237,6 +238,7 @@ div.playTo > p {
     position: absolute;
     bottom: 30%;
     left: 2%;
+    text-shadow: 2px 1px 0px #010c10;
 }
 
 .mainContainer{
