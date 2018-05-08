@@ -3,6 +3,7 @@ $(document).ready(initializeApp);
 var activePlayer = null;
 var player1 = null;
 var player2 = null;
+let activeWinner = false;
 
 function initializeApp(){
     clickHandler();
@@ -37,6 +38,9 @@ function processMove(){
         activePlayer = player2;
     }
     activePlayer.status = 'active';
+    if (activeWinner){
+        return;
+    }
     var placementRow = board.updateBoardArray(row, column, activePlayer.playerNumber);
     tokenAnimation.createToken(column, activePlayer.playerNumber, activePlayer.tokenNumber);
     //tokenAnimation is processing logic after token drop. e.g.

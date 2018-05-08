@@ -59,6 +59,7 @@ h1{
     color:whitesmoke;
 }
 
+
 .landingPlayer > div {
     width: 50%;
     height: 20%;
@@ -68,6 +69,19 @@ h1{
 
 div.player1Img, div.player2Img {
     height: 60%;
+}
+
+.tokenSpot{
+    border-radius: 50%;
+    height: 100%;
+    width: 15%;
+    z-index: 49;
+    margin: 0 auto;
+    border-left: 1px ridge #c8c8c8;
+    border-right: 2px ridge beige;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .landingPlayer p, .landingPlayer input, .landingPlayer button {
@@ -202,7 +216,8 @@ div.playTo > p {
 
 .header{
     height:10%;
-    width:100%;
+    width:80%;
+    margin-left:20%;
     font-size: 2rem;
     text-align:center;
 }
@@ -226,6 +241,7 @@ div.playTo > p {
     font-size: 2rem;
     margin-top: 5%;
 }
+
 
 .resetBtn {
     width: 80%;
@@ -256,9 +272,9 @@ div.playTo > p {
 }
 
 .player1{
-    background-color: rgba(75, 189, 271, .7);
+    background-color: rgba(75, 189, 271, .4);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-top: 2%;
     padding-left: 2%;
     background-repeat: no-repeat;
@@ -266,15 +282,23 @@ div.playTo > p {
 }
 
 .player2{
-    font-weight:normal;
     background-color: rgba(75, 189, 271, .4);
-    border: none;
+    font-weight: bold;
     font-size: 1rem;
+    padding-top: 2%;
+    padding-left: 2%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    /* font-weight:normal;
+    background-color: rgba(75, 189, 271, .7);
+    border: none;
+    font-size: 1.5rem;
     vertical-align: center;
     padding-top:3%;
     padding-left: 2%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
 }
 
 .player1, .player2{
@@ -282,6 +306,18 @@ div.playTo > p {
     width: 49%;
     display: inline-block;
     text-align:center;
+}
+
+.activePlayer{
+    font-weight:normal;
+    background-color: rgba(75, 189, 271, .7);
+    border: none;
+    font-size: 1.5rem;
+    vertical-align: center;
+    padding-top:1%;
+    padding-left: 2%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .gameContainer{
