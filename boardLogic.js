@@ -69,45 +69,23 @@ var board = {
         else{
         }
     },
-    disableColumn: function(column)
-    {
+    disableColumn: function(column){
         $('.column' + column).attr('class','disableClicks');
     },
     changePlayer: function (){
-    if(this.playerTurn === 1){
-        this.playerTurn = 2;
-        $(".tokenHoverContainer img").attr('src', 'assets/token' + player2.tokenNumber + '.png');
-        $(".player2").css({
-            'font-weight': 'bold',
-            'background-color': 'rgba(75, 189, 271, .7)',
-            'font-size': '1.5rem',
-            'padding-top': '2%',
-        })
-        $(".player1").css({
-            'font-weight': 'normal',
-            'background-color': 'rgba(75, 189, 271, .4)',
-            'border': 'none',
-            'font-size': '1rem',
-            'padding-top': '3%',
-        })
-    } else{
-        this.playerTurn = 1;
-        $(".tokenHoverContainer img").attr('src', 'assets/token' + player1.tokenNumber + '.png');
-        $(".player1").css({
-            'font-weight': 'bold',
-            'background-color': 'rgba(75, 189, 271, .7)',
-            'font-size': '1.5rem',
-            'padding-top': '2%',
-        })
-        $(".player2").css({
-            'font-weight': 'normal',
-            'background-color': 'rgba(75, 189, 271, .4)',
-            'border': 'none',
-            'font-size': '1rem',
-            'padding-top': '3%',
-        })
+        if(this.playerTurn === 1){
+            this.playerTurn = 2;
+            $(".tokenHoverContainer img").attr('src', 'assets/token' + player2.tokenNumber + '.png');
+            $(".player1").removeClass('activePlayer');
+            $(".player2").addClass('activePlayer');
+            
+        } else{
+            this.playerTurn = 1;
+            $(".tokenHoverContainer img").attr('src', 'assets/token' + player1.tokenNumber + '.png');
+            $(".player2").removeClass('activePlayer');
+            $(".player1").addClass('activePlayer');
 
-    }
+        }
     },
     resetBoard: function(){
         this.boardArray = [];
@@ -118,5 +96,6 @@ var board = {
         }
         $('div.gameContainer').removeClass('disableClicks');
         $('.winMsg').text('');
+        activeWinner = false;
     }
 };

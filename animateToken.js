@@ -32,6 +32,7 @@ var tokenAnimation = {
                         //what does top: do?
         token.animate({top: rowPosition},
             duration, 'easeOutBounce', function(){
+                $('div.gameContainer').addClass('disableClicks');
                 //where does that come from?
                 that.changeToFaux(row, col, playerNumber, playerToken);
                 token.css('display','none');
@@ -42,21 +43,26 @@ var tokenAnimation = {
                 }
                 var result = board.checkWinCondition(row, col, playerNumber);
                 if(result === 'win'){
-                    $('div.gameContainer').addClass('disableClicks');
+                    
                     resultScreen(playerNumber);
+                    activeWinner = true;
                 }
                 else if(result === 'tie'){
+                    // $('div.gameContainer').addClass('disableClicks');
                     resultScreen('tie');
+                    activeWinner = true;
                 }
                 else{
-                    $('div.gameContainer').removeClass('disableClicks');
+                    
                     board.changePlayer();
                     if(player1.name === 'AI' && player2.name === 'AI'){
                         moveAi();
                     }
                     else if(player2.name === 'AI' && activePlayer.playerNumber === 1){
+                        $('div.gameContainer').removeClass('disableClicks');
                         moveAi();
                     }
+                    $('div.gameContainer').removeClass('disableClicks');
                 }
             });
     },
