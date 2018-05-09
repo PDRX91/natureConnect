@@ -4,10 +4,12 @@ var activePlayer = null;
 var player1 = null;
 var player2 = null;
 let activeWinner = false;
+let landingPage = null;
 
 function initializeApp(){
     clickHandler();
     board.createBoard();
+    landingPage = new LandingPage();
 }
 function clickHandler(){
     $('.bestOfOptions').change(function(){
