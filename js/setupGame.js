@@ -62,6 +62,13 @@ class SetupGame{
 		} else if (currentVal === 'Player2'){
 			$('#playerName2').css('pointer-events', 'auto').attr('placeholder', 'Player2');
 		}
-		console.log('its working');
+	}
+	buttonChange(){
+		$(".resetBtn").hide();
+		let homeBtn = $("<button>").addClass('homeBtn').click(this.backToHome).text('Home');
+		$(".statsContainer").append(homeBtn);
+	}
+	backToHome(){
+		window.location.reload();
 	}
 }
