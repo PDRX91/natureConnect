@@ -6,7 +6,6 @@ html {
 html * {
     margin: 0;
     padding: 0;
-    font-size: 0;
     font-family: 'Freckle Face', cursive;
     color:white;
     box-sizing: border-box;
@@ -20,12 +19,7 @@ body {
 }
 
 h1{
-    margin: 0;
     font-size: 3rem;
-}
-
-*{
-    box-sizing:border-box;
 }
 
 .landingPage {
@@ -62,6 +56,7 @@ h1{
 .nameContainer{
     width:80%;
     margin:auto;
+    font-size: 0;
 }
 .nameContainer > div {
     width: 50%;
@@ -249,6 +244,7 @@ div.playTo > p {
     width:100vmin;
     height:100vmin;
     margin: 0 auto;
+    font-size: 0;
     text-shadow: 2px 3px 0px #010c10;
 }
 
