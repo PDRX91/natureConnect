@@ -4,7 +4,6 @@ class TokenExplosion{
     this.spawnParticle.bind(this);
     }
     spawnParticle(transform, delay, lifeTime){ 
-        console.log(this);
         function birthMe(){
             var colorArray = ['red', 'orange', 'yellow', 'orangered']
             var randomColor = colorArray[Math.floor(Math.random()*3)];

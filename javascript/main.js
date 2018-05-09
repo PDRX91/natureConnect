@@ -6,11 +6,13 @@ var player2 = null;
 let activeWinner = false;
 let setupGame = null;
 let tokenExplosion = null;
+let tokenAnimation = null;
 function initializeApp(){
     board.createBoard();
     setupGame = new SetupGame();
     clickHandler();
     tokenExplosion = new TokenExplosion();
+    tokenAnimation = new TokenAnimation();
 }
 function clickHandler(){
     $('.bestOfOptions').change(function(){
@@ -20,7 +22,7 @@ function clickHandler(){
         setupGame.hideLandingAndProcessInputs();
     });
     $('.gameboard > div').click(processMove);
-    $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);
+    $(".gameboard > div").hover((e) => tokenAnimation.checkShowFauxToken(e), (e) => tokenAnimation.toggleFauxToken(e, 'none'));
     $('.tokens>div').on('click', function(){
         setupGame.setPlayerTokenImg();
     });
