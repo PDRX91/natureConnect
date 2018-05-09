@@ -62,6 +62,30 @@ class SetupGame{
 		} else if (currentVal === 'Player2'){
 			$('#playerName2').css('pointer-events', 'auto').attr('placeholder', 'Player2');
 		}
-		console.log('its working');
+	}
+	buttonChange(){
+		$(".resetBtn").hide();
+		let homeBtn = $("<button>").addClass('homeBtn').click(this.backToHome).text('Home');
+		$(".statsContainer").append(homeBtn);
+	}
+	backToHome(){
+		
+		$('.landingPage').fadeIn('slow');
+		$('.mainPage').fadeOut('slow');
+		initializeApp();
+		$(".token1, .token2, .token3, .token4").css('display', 'block');
+		$(".playerImg1, .playerImg2").css('background-image', 'none');
+		$(".gameboard > div").css("background-image", "none");
+		$(".gameContainer").removeClass('disableClicks');
+		$(".playerDisplay1, .playerDisplay2").text('0');
+		$(".winBox").remove();
+		// this.playerName1= 'Player1';
+		// this.playerName2= 'Player2';
+		// this.playerImg1= null;
+		// this.playerImg2= null;
+		// this.token1= 1;
+		// this.token2= 2;
+		// this.playTo= 1;
+		// this.setPlayerTokenImg.bind(this);
 	}
 }
