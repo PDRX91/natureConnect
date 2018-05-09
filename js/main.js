@@ -93,9 +93,11 @@ function resultScreen(result) {
                     winBox = $("<div>").addClass('winBox');
                     setTimeout(function(){
                         $('.winMsg .winBox').text(player1.name + ' won the match!').css('color', 'red');
+                        setupGame.buttonChange();
                     },1);
                 }
                 $('.playerDisplay1').text(player1.gameWon);
+
             }
             else if (activePlayer.playerNumber === 2) {
                 player2.gameWon++;
@@ -105,6 +107,7 @@ function resultScreen(result) {
                     winBox = $("<div>").addClass('winBox');
                     setTimeout(function(){
                         $('.winMsg .winBox').text(player2.name + ' won the match!').css('color', 'red');
+                        setupGame.buttonChange();
                     },1);
                 }
                 $('.playerDisplay2').text(player2.gameWon);
