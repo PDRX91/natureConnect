@@ -4,24 +4,25 @@ var activePlayer = null;
 var player1 = null;
 var player2 = null;
 let activeWinner = false;
-let landingPage = null;
-
+let setupGame = null;
+let tokenExplosion = null;
 function initializeApp(){
-    clickHandler();
     board.createBoard();
-    landingPage = new LandingPage();
+    setupGame = new SetupGame();
+    clickHandler();
+    tokenExplosion = new TokenExplosion();
 }
 function clickHandler(){
     $('.bestOfOptions').change(function(){
-        landingPage.getBestOf();
+        setupGame.getBestOf();
     });
     $('.startBtn').on('click', function(){
-        landingPage.hideLandingAndProcessInputs();
+        setupGame.hideLandingAndProcessInputs();
     });
     $('.gameboard > div').click(processMove);
     $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);
     $('.tokens>div').on('click', function(){
-        landingPage.setPlayerTokenImg();
+        setupGame.setPlayerTokenImg();
     });
     $('.resetBtn').on('click', function(){
         board.resetBoard()
