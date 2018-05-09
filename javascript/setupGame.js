@@ -1,4 +1,4 @@
-class LandingPage{
+class SetupGame{
 	constructor(){
 		this.playerName1= 'Player1';
 		this.playerName2= 'Player2';

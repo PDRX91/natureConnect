@@ -27,7 +27,7 @@ var tokenAnimation = {
         var duration = 300 + 100*row;
         var target = $('.column' + col + '.row' + row);
         var rowPosition = target.position().top - $('#tokenActive').position().top;
-        setTimeout(() => {explode(row, col, duration-500)});
+        setTimeout(() => {tokenExplosion.explode(row, col, duration-500)});
         $('div.gameContainer').addClass('disableClicks');
                         //what does top: do?
         token.animate({top: rowPosition},
