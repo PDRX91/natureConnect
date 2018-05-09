@@ -17,7 +17,7 @@
         height:unset;
         position:unset;
     }
-    .statsContainer > .resetBtn{
+    .statsContainer > .resetBtn, .statsContainer > .homeBtn{
         width: 30%;
         height: 30%;
         font-size:2rem;
