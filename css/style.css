@@ -235,7 +235,7 @@ div.playTo > p {
     text-shadow: 2px 1px 0px #010c10;
 }
 
-.startBtn:hover {
+.startBtn:hover, .resetBtn:hover, .homeBtn:hover {
     -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
     -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
     box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
@@ -275,7 +275,6 @@ div.playTo > p {
     font-size: 2rem;
     margin-top: 5%;
 }
-
 
 .resetBtn, .homeBtn {
     width: 80%;
