@@ -27,7 +27,7 @@ var landingPage = {
 			$('.tokens>div').off();
 		}
 		//whats the difference between e.target and 'this'
-		$(event.target).css('opacity', '0');
+		$(event.target).css('display', 'none');
 	},	
 
 	setName: function() {
