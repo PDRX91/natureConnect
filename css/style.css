@@ -128,6 +128,7 @@ div.playTo > select {
     -webkit-appearance: none;
     padding: 1px 15px;
     text-align: center;
+    cursor: pointer
 }
 
 div.playTo > select, div.playTo > p {
@@ -163,7 +164,7 @@ div.opponentList > select {
     display: inline-block;
     margin: 1% 2%;
     color: #e80c0c;
-
+    cursor: pointer;
 }
 
 
@@ -195,6 +196,7 @@ div.playTo > p {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    cursor: pointer;
 }
 
 .tokens div:hover {

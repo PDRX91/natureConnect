@@ -1,6 +1,6 @@
 var landingPage = {
-	playerName1: 'AI',
-	playerName2: 'AI',
+	playerName1: 'Player1',
+	playerName2: 'Player2',
 	playerImg1: null,
 	playerImg2: null,
 	token1: 1,
@@ -9,10 +9,6 @@ var landingPage = {
 	getBestOf: function() {
 			var bestOf = $('.bestOfOptions option:selected').val();
 			$('.playToNumber').text(bestOf);
-	},
-	checkToStart: function(){
-		if(this.playerName1 == '');
-		this.hideLanding();
 	},
 	setPlayerTokenImg: function() {
 		var imgPath = $(event.target).css('background-image');
@@ -35,11 +31,10 @@ var landingPage = {
 	},	
 
 	setName: function() {
-		this.playerName1 = $('.playerName1').val() || 'AI';
-		this.playerName2 = $('.playerName2').val() || 'AI';
+		this.playerName2 = $('.opponentSelect').val();
 	},
 
-  	hideLanding: function() {
+  	hideLandingAndProcessInputs: function() {
 		$('.landingPage').fadeOut('slow');
 		$('.mainPage').fadeIn('slow');
 		this.setName();

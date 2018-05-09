@@ -55,14 +55,12 @@ var tokenAnimation = {
                 else{
                     
                     board.changePlayer();
-                    if(player1.name === 'AI' && player2.name === 'AI'){
+                    if(player2.name === 'AI' && activePlayer.playerNumber === 1){
                         moveAi();
                     }
-                    else if(player2.name === 'AI' && activePlayer.playerNumber === 1){
+                    else{
                         $('div.gameContainer').removeClass('disableClicks');
-                        moveAi();
                     }
-                    $('div.gameContainer').removeClass('disableClicks');
                 }
             });
     },

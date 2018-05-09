@@ -8,7 +8,10 @@ function moveAi(){
         }
         move = randomRow;
     }
-    setTimeout(()=>{$('.column' + move + '.row5').click()}, 1000);
+    
+    setTimeout(()=>{
+        $('div.gameContainer').removeClass('disableClicks');
+        $('.column' + move + '.row5').click()}, 800);
 }
 
 function checkForWinAndLoss(){
