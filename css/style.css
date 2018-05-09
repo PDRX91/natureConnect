@@ -1,36 +1,30 @@
 html {
     font-size: 3vmin;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 html * {
     margin: 0;
     padding: 0;
-    font-size: 0;
     font-family: 'Freckle Face', cursive;
     color:white;
     box-sizing: border-box;
 }
 
 body {
-    width:100vw;
-    height:100vh;
+    width: 100vw;
+    height: 100vh;
     background-image: url("../assets/scenery-pictures-3.jpg");
     background-size: cover;
 }
 
 h1{
-    margin: 0;
     font-size: 3rem;
 }
 
-*{
-    box-sizing:border-box;
-}
-
 .landingPage {
-    width:100vmin;
-    height:100vh;
+    width: 100vmin;
+    height: 100vh;
     margin: 0 auto;
 }
 
@@ -39,7 +33,7 @@ h1{
     width:100%;
     font-size: 2rem;
     text-align:center;
-    text-shadow: 3px 3px 0px #010c10
+    text-shadow: 3px 3px 0px #010c10;
 }
 
 .landingBody {
@@ -62,13 +56,13 @@ h1{
 .nameContainer{
     width:80%;
     margin:auto;
+    font-size: 0;
 }
 .nameContainer > div {
     width: 50%;
     height: 20%;
     display: inline-block;
     margin-top: 1%;
-    /*border: 1px dashed blue;*/
 }
 
 div.player1Img, div.player2Img {
@@ -97,7 +91,7 @@ div.player1Img, div.player2Img {
 .playerNameContainer{
     width:100%;
 }
-p.playerName {
+.playerName {
     font-size: 1.1rem;
     margin-left: 23%;
     margin-right: 1%;
@@ -107,6 +101,10 @@ p.playerName {
     color: white;
     display: inline-block;
     background-color: rgba(75, 189, 271, .3);
+}
+
+#playerName2{
+    pointer-events: none;
 }
 
 .playerImg1, .playerImg2 {
@@ -120,7 +118,6 @@ div.playTo {
     height: 20%;
     display: block;
     margin: 5% auto;
-    /*border: 1px dashed green;*/
 }
 
 div.playTo > select {
@@ -136,17 +133,16 @@ div.playTo > select, div.playTo > p {
     display: inline-block;
     margin: 1% 2%;
     color: #e80c0c;
-
 }
 
 div.playTo > p {
     margin: auto;
 }
 
-span.playToNumber {
+/*span.playToNumber {
     font-size: 1rem;
 }
-
+*/
 
 div.opponentList{
     width: 20%;
@@ -154,7 +150,7 @@ div.opponentList{
     display: inline-block;
 }
 .opponentSelect{
-    font-size:1.0rem;
+    font-size: 1rem;
 }
 div.opponentList > select {
     appearance: none;
@@ -249,6 +245,7 @@ div.playTo > p {
     width:100vmin;
     height:100vmin;
     margin: 0 auto;
+    font-size: 0;
     text-shadow: 2px 3px 0px #010c10;
 }
 
@@ -256,7 +253,6 @@ div.playTo > p {
     height:10%;
     width:80%;
     margin-left:20%;
-    font-size: 2rem;
     text-align:center;
 }
 
@@ -327,16 +323,6 @@ div.playTo > p {
     padding-left: 2%;
     background-repeat: no-repeat;
     background-size: contain;
-
-    /* font-weight:normal;
-    background-color: rgba(75, 189, 271, .7);
-    border: none;
-    font-size: 1.5rem;
-    vertical-align: center;
-    padding-top:3%;
-    padding-left: 2%;
-    background-repeat: no-repeat;
-    background-size: contain; */
 }
 
 .player1, .player2{
