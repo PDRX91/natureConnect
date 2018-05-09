@@ -73,29 +73,47 @@ function resultScreen(result) {
         $('.winMsg').append(winBox);
     }
     else {
-        if(player1.name === 'AI' && player2.name === 'AI'){
-            var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' ' + activePlayer.playerNumber + ' wins this round!');
+        // if(player1.name === 'AI' && player2.name === 'AI'){
+        //     var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' ' + activePlayer.playerNumber + ' wins this round!');
+        // } else {
+        let winText;
+        if (seriesLength === 1){
+            winText = ' won the match!'
+            var winBox = $("<div>").addClass('winBox');
+            setTimeout(function(){
+                $('.winMsg .winBox').text(activePlayer.name + ' won the match!').css('color', 'red');
+            },1);
         } else {
-            var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' wins this round!');
+            var winbox;
             if (activePlayer.playerNumber === 1) {
                 player1.gameWon++;
-                $('.playerDisplay1').text(player1.gameWon);
-                if (seriesLength > 1 && player1.gameWon > seriesLength/2.0) {
+                if(!(player1.gameWon > seriesLength/2.0)){
+                    winBox = $("<div>").addClass('winBox').text(player1.name + ' won the game!');
+                } else {
+                    winBox = $("<div>").addClass('winBox');
                     setTimeout(function(){
-                        $('.winMsg .winBox').text(player1.name + ' won the series!').css('color', 'red');
-                    },1000);
+                        $('.winMsg .winBox').text(player1.name + ' won the match!').css('color', 'red');
+                    },1);
                 }
+                $('.playerDisplay1').text(player1.gameWon);
             }
             else if (activePlayer.playerNumber === 2) {
                 player2.gameWon++;
-                $('.playerDisplay2').text(player2.gameWon);
-                if (seriesLength > 1 && player2.gameWon > seriesLength/2.0) {
+                if(!(player2.gameWon > seriesLength/2.0)){
+                    winBox = $("<div>").addClass('winBox').text(player2.name + ' won the game!');
+                } else {
+                    winBox = $("<div>").addClass('winBox');
                     setTimeout(function(){
-                    $('.winMsg .winBox').text(player2.name + ' won the series!').css('color', 'red');
-                     }, 1000);
+                        $('.winMsg .winBox').text(player2.name + ' won the match!').css('color', 'red');
+                    },1);
                 }
+                $('.playerDisplay2').text(player2.gameWon);
             }
+
         }
+        // var winBox = $("<div>").addClass('winBox').text(activePlayer.name + winText);
+        
+        // }
         $('.winMsg').append(winBox);
     }
 }
