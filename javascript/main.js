@@ -4,22 +4,28 @@ var activePlayer = null;
 var player1 = null;
 var player2 = null;
 let activeWinner = false;
-
+let setupGame = null;
+let tokenExplosion = null;
+let tokenAnimation = null;
+let board = null;
 function initializeApp(){
+    setupGame = new SetupGame();
     clickHandler();
-    board.createBoard();
+    tokenExplosion = new TokenExplosion();
+    tokenAnimation = new TokenAnimation();
+    board = new Board();
 }
 function clickHandler(){
     $('.bestOfOptions').change(function(){
-        landingPage.getBestOf();
+        setupGame.getBestOf();
     });
     $('.startBtn').on('click', function(){
-        landingPage.hideLanding();
+        setupGame.hideLandingAndProcessInputs();
     });
     $('.gameboard > div').click(processMove);
-    $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);
+    $(".gameboard > div").hover((e) => tokenAnimation.checkShowFauxToken(e), (e) => tokenAnimation.toggleFauxToken(e, 'none'));
     $('.tokens>div').on('click', function(){
-        landingPage.setPlayerTokenImg();
+        setupGame.setPlayerTokenImg();
     });
     $('.resetBtn').on('click', function(){
         board.resetBoard()

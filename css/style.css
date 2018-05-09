@@ -1,36 +1,30 @@
 html {
     font-size: 3vmin;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 html * {
     margin: 0;
     padding: 0;
-    font-size: 0;
     font-family: 'Freckle Face', cursive;
     color:white;
     box-sizing: border-box;
 }
 
 body {
-    width:100vw;
-    height:100vh;
-    background-image: url("assets/scenery-pictures-3.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/scenery-pictures-3.jpg");
     background-size: cover;
 }
 
 h1{
-    margin: 0;
     font-size: 3rem;
 }
 
-*{
-    box-sizing:border-box;
-}
-
 .landingPage {
-    width:100vmin;
-    height:100vmin;
+    width: 100vmin;
+    height: 100vh;
     margin: 0 auto;
 }
 
@@ -39,7 +33,7 @@ h1{
     width:100%;
     font-size: 2rem;
     text-align:center;
-    text-shadow: 3px 3px 0px #010c10
+    text-shadow: 3px 3px 0px #010c10;
 }
 
 .landingBody {
@@ -48,23 +42,27 @@ h1{
 }
 
 .landingPlayer {
-    height: 40%;
-    /*border: 1px dashed blue;*/
+    height: 45%;
     background-color: rgba(22,22,22,0.5);
     border-radius: 3%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
+    padding: 1% 5%;
 }
 
 ::placeholder {
     color:whitesmoke;
 }
 
-
-.landingPlayer > div {
+.nameContainer{
+    width:80%;
+    margin:auto;
+    font-size: 0;
+}
+.nameContainer > div {
     width: 50%;
     height: 20%;
     display: inline-block;
-    /*border: 1px dashed blue;*/
+    margin-top: 1%;
 }
 
 div.player1Img, div.player2Img {
@@ -73,8 +71,8 @@ div.player1Img, div.player2Img {
 
 .tokenSpot{
     border-radius: 50%;
-    height: 100%;
-    width: 15%;
+    height: 9vh;
+    width: 9vh;
     z-index: 49;
     margin: 0 auto;
     border-left: 1px ridge #c8c8c8;
@@ -85,17 +83,28 @@ div.player1Img, div.player2Img {
 }
 
 .landingPlayer p, .landingPlayer input, .landingPlayer button {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     color: lightblue;
     text-shadow: 1px 1px 0px #010c10;
 }
-
-.landingPlayer input {
-    width: 60%;
-    margin: 0 20%;
+.playerNameContainer{
+    width:100%;
+}
+.playerName {
+    font-size: 1.1rem;
+    margin-left: 23%;
+    margin-right: 1%;
+    border: outset 3px white;
+    border-radius: 5%;
+    width: 50%;
     color: white;
+    display: inline-block;
     background-color: rgba(75, 189, 271, .3);
+}
+
+#playerName2{
+    pointer-events: none;
 }
 
 .playerImg1, .playerImg2 {
@@ -105,11 +114,10 @@ div.player1Img, div.player2Img {
 }
 
 div.playTo {
-    width: 80%;
+    width: 100%;
     height: 20%;
     display: block;
-    margin: 0 auto;
-    /*border: 1px dashed green;*/
+    margin: 5% auto;
 }
 
 div.playTo > select {
@@ -117,6 +125,7 @@ div.playTo > select {
     -webkit-appearance: none;
     padding: 1px 15px;
     text-align: center;
+    cursor: pointer
 }
 
 div.playTo > select, div.playTo > p {
@@ -124,20 +133,42 @@ div.playTo > select, div.playTo > p {
     display: inline-block;
     margin: 1% 2%;
     color: #e80c0c;
-
 }
 
 div.playTo > p {
-    margin-left: 10%;
+    margin: auto;
 }
 
-span.playToNumber {
+/*span.playToNumber {
     font-size: 1rem;
 }
+*/
+
+div.opponentList{
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+}
+.opponentSelect{
+    font-size: 1rem;
+}
+div.opponentList > select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 1px 15px;
+    text-align: center;
+    display: inline-block;
+    margin: 1% 2%;
+    color: #e80c0c;
+    cursor: pointer;
+}
+
 
 .others {
     color: brown;
 }
+
+
 
 div.playTo > p {
     padding-left:  15%;
@@ -145,21 +176,23 @@ div.playTo > p {
 }
 
 .tokens {
-    height: 40%;
-    width: 50%;
-    margin: 0 auto;
+    height: 35vh;
+    width: 35vh;
+    margin: 0px auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
+    box-sizing: content-box;
 }
 
 .tokens div {
-    height: 46%;
-    width: 34%;
+    height: 37%;
+    width: 37%;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    cursor: pointer;
 }
 
 .tokens div:hover {
@@ -169,19 +202,19 @@ div.playTo > p {
 }
 
 .token1 {
-    background-image: url(assets/token1.png);
+    background-image: url('../assets/token1.png');
 }
 
 .token2 {
-    background-image: url(assets/token2.png);
+    background-image: url('../assets/token2.png');
 }
 
 .token3 {
-    background-image: url(assets/token3.png);
+    background-image: url('../assets/token3.png');
 }
 
 .token4 {
-    background-image: url(assets/token5.png);
+    background-image: url('../assets/token5.png');
 }
 
 .start {
@@ -193,6 +226,7 @@ div.playTo > p {
 .startBtn {
     display: inline-block;
     width: 15%;
+    min-width: 70px;
     height: 100%;
     color: #eaefee;
     border-radius: 20%;
@@ -211,6 +245,7 @@ div.playTo > p {
     width:100vmin;
     height:100vmin;
     margin: 0 auto;
+    font-size: 0;
     text-shadow: 2px 3px 0px #010c10;
 }
 
@@ -218,7 +253,6 @@ div.playTo > p {
     height:10%;
     width:80%;
     margin-left:20%;
-    font-size: 2rem;
     text-align:center;
 }
 
@@ -289,16 +323,6 @@ div.playTo > p {
     padding-left: 2%;
     background-repeat: no-repeat;
     background-size: contain;
-
-    /* font-weight:normal;
-    background-color: rgba(75, 189, 271, .7);
-    border: none;
-    font-size: 1.5rem;
-    vertical-align: center;
-    padding-top:3%;
-    padding-left: 2%;
-    background-repeat: no-repeat;
-    background-size: contain; */
 }
 
 .player1, .player2{
