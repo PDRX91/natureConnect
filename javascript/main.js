@@ -14,7 +14,7 @@ function clickHandler(){
         landingPage.getBestOf();
     });
     $('.startBtn').on('click', function(){
-        landingPage.hideLanding();
+        landingPage.checkToStart();
     });
     $('.gameboard > div').click(processMove);
     $(".gameboard > div").hover(tokenAnimation.checkShowFauxToken, tokenAnimation.hideFauxToken);

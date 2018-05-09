@@ -10,7 +10,10 @@ var landingPage = {
 			var bestOf = $('.bestOfOptions option:selected').val();
 			$('.playToNumber').text(bestOf);
 	},
-
+	checkToStart: function(){
+		if(this.playerName1 == '');
+		this.hideLanding();
+	},
 	setPlayerTokenImg: function() {
 		var imgPath = $(event.target).css('background-image');
 		//what is the split part

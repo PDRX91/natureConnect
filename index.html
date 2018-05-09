@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <script src="./javascript/singlePlayerMode.js"></script>
     <script src="./javascript/landingPage.js"></script>
-    <script src = './javascript/boardLogic.js'></script>
-    <script src = './javascript/boom.js'></script>
-    <script src ='./javascript/animateToken.js'></script>
+    <script src='./javascript/boardLogic.js'></script>
+    <script src='./javascript/boom.js'></script>
+    <script src='./javascript/animateToken.js'></script>
     <script src="./javascript/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mediaQuery.css">
     <title>Connect 4</title>
 </head>
+
 <body>
     <div class="landingPage">
         <div class="landingHeader">NATURE CONNECT</div>
         <div class="landingBody">
             <div class="landingPlayer">
-                <p>Enter Your names in each field for a 2 player game,</p>
-                <p>then select the token you want to play with!</p>
-                <p>Press Start with the second name blank to play against the AI!</p>
-                <div>
-                    <input type="text" placeholder="Player1" class="playerName1">
-                </div>
-                <div>
-                    <input type="text" placeholder="Player2" class="playerName2">
-                </div>
-                <div class="playerImg1"><div class="tokenSpot"></div></div>
-                <div class="playerImg2"><div class="tokenSpot"></div></div>
-                <div class="playTo">
-                    <p>Playing for Best of</p>
-                    <select name ='bestOf' class="bestOfOptions">
-                        <option value="1" class="others">1</option>
-                        <option value="3" class="others">3</option>
-                        <option value="5" class="others">5</option>
-                        <option value="7" class="others">7</option>
-                        <option value="9" class="others">9</option>
-                        <option value="11" class="others">11</option>
-                    </select>
+                <p>Select the your token to play!</p>
+                <div class="nameContainer">
+
+                    <div class= "playerContainer">
+                        <p class="playerName"> Player 1</p>
+                    </div>
+                    <div class = "playerContainer">
+                        <p class="playerName"> Player 2</p>
+                        <div class="opponentList">
+                            <select name='opponent' class="opponentSelect">
+                                <option value="human" class="others">Human</option>
+                                <option value="AI" class="others">AI</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="playerImg1">
+                        <div class="tokenSpot"></div>
+                    </div>
+                    <div class="playerImg2">
+                        <div class="tokenSpot"></div>
+                    </div>
+                    <div class="playTo">
+                        <p>Playing for Best of</p>
+                        <select name='bestOf' class="bestOfOptions">
+                            <option value="1" class="others">1</option>
+                            <option value="3" class="others">3</option>
+                            <option value="5" class="others">5</option>
+                            <option value="7" class="others">7</option>
+                            <option value="9" class="others">9</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="tokens">
@@ -57,8 +71,13 @@
             <h1>NATURE CONNECT</h1>
         </div>
         <div class="statsContainer">
-            <p>Playing for Best of <span class="playToNumber">1</span> </p>
-            <h1><span class="playerDisplay1">0</span> to <span class="playerDisplay2">0</span></h1>
+            <p>Playing for Best of
+                <span class="playToNumber">1</span>
+            </p>
+            <h1>
+                <span class="playerDisplay1">0</span> to
+                <span class="playerDisplay2">0</span>
+            </h1>
             <button class="resetBtn">Reset</button>
         </div>
         <div class="mainContainer">
@@ -69,25 +88,25 @@
             <div class="gameContainer">
                 <div class="tokenHoverContainer">
                     <div class="column0">
-                        <img class ="faux" alt="">
+                        <img class="faux" alt="">
                     </div>
                     <div class="column1">
-                        <img class ="faux" alt="">
+                        <img class="faux" alt="">
                     </div>
                     <div class="column2">
-                        <img class ="faux" alt="">
+                        <img class="faux" alt="">
                     </div>
                     <div class="column3">
-                        <img class ="faux" alt="">
+                        <img class="faux" alt="">
                     </div>
                     <div class="column4">
-                        <img class ="faux" alt="">
+                        <img class="faux" alt="">
                     </div>
                     <div class="column5">
-                        <img class ="faux" alt="">
+                        <img class="faux" alt="">
                     </div>
                     <div class="column6">
-                        <img class ="faux" alt="">
+                        <img class="faux" alt="">
                     </div>
                 </div>
                 <div class="gameboard">
@@ -145,4 +164,5 @@
         </div>
     </div>
 </body>
+
 </html>
