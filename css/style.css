@@ -399,10 +399,12 @@ div.playTo > p {
 }
 
 .winMsg {
-    height: 18%;
-    width: 138%;
+    height: 13%;
+    width: 80vmin;
     position: absolute;
-    right: -28%;
+    /* right: -28%; */
+    /* border: 1px solid red;
+    box-sizing: border-box; */
 }
 
 #tokenActive {
@@ -419,7 +421,7 @@ div.playTo > p {
     height: 13%;
     width: 80%;
     margin: auto;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-align: center;
 }
 
