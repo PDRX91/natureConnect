@@ -1,15 +1,34 @@
+@media only screen and (min-width: 1200px) {
+    .landingPlayer {
+        width: 65%;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .landingPlayer {
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 2100px) {
+    .landingPlayer {
+        width: 50%;
+    }
+}
 @media only screen and (max-width: 768px) {
 
     html {
     font-size: 16px;
-}
-    
-    .landingPlayer p, .opponentSelect{
+    }
+    .landingPlayer {
+        width: 80%;
+    }
+    .landingPlayer p{
         font-size: 1.6rem;
+    }
+    .opponentSelect {
+        font-size: 1.2 rem;
     }
     .landingHeader{
         font-size:3rem;
-       
     }
     p.playerName {
         margin-left: 20%;
@@ -59,7 +78,16 @@
     }
     
 }
-
+@media only screen and (max-width: 600px) {
+    .mainContainer {
+        margin-top: 15%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .mainContainer {
+        margin-top: 20%;
+    }
+}
 @media only screen and (max-width: 480px) {
 	html {
         font-size: 13px;
@@ -75,15 +103,14 @@
     div.playTo{
         margin: 5% auto;
     }
-    .landingPlayer p, div.playTo p{
-        font-size: 1.8rem;
+    .landingPlayer,
+    .bestOfMsg{
+       font-size: 1.6rem;
     }
     .landingHeader{
         font-size:3rem;  
     }
-    .opponentSelect{
-        font-size:1.7rem;
-    }
+
     p.playerName {
         font-size: 1.7rem;
         margin-left: 5%;
@@ -91,8 +118,8 @@
         width: 60%;
     }
     .tokens{
-        height: 35vh;
-        width: 35vh;
+        height: 25vh;
+        width: 25vh;
     }
     .playerContainer{
         margin-bottom: 3%;
@@ -100,6 +127,9 @@
     .statsContainer > .resetBtn{
         top: 1%;
         left: 1%;
+    }
+    .mainContainer {
+        margin-top: 25%;
     }
 }
 
