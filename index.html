@@ -24,7 +24,17 @@
         </div>
         <div class="landingBody">
             <div class="landingPlayer">
-                <p class="instructionMsg">Select your token to play!</p>
+                    <div class="playTo">
+                            <p>Playing for Best of</p>
+                            <select name='bestOf' class="bestOfOptions">
+                                <option value="1" class="others">1</option>
+                                <option value="3" class="others">3</option>
+                                <option value="5" class="others">5</option>
+                                <option value="7" class="others">7</option>
+                                <option value="9" class="others">9</option>
+                            </select>
+                        </div>
+                <p>Select your token to play!</p>
                 <div class="nameContainer">
 
                     <div class= "playerContainer1">
@@ -47,27 +57,19 @@
                     <div class="playerImg2">
                         <div class="tokenSpot"></div>
                     </div>
-                    <div class="playTo">
-                        <p class="bestOfMsg">Playing for Best of</p>
-                        <select name='bestOf' class="bestOfOptions">
-                            <option value="1" class="others">1</option>
-                            <option value="3" class="others">3</option>
-                            <option value="5" class="others">5</option>
-                            <option value="7" class="others">7</option>
-                            <option value="9" class="others">9</option>
-                        </select>
-                    </div>
+                    
+                </div>
+                <div class="tokens">
+                    <div class="token1"></div>
+                    <div class="token2"></div>
+                    <div class="token3"></div>
+                    <div class="token4"></div>
                 </div>
             </div>
-            <div class="tokens">
-                <div class="token1"></div>
-                <div class="token2"></div>
-                <div class="token3"></div>
-                <div class="token4"></div>
-            </div>
-            <div class="start">
+            
+            <!-- <div class="start">
                 <button class="startBtn">Start!</button>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="mainPage hide">
@@ -82,7 +84,7 @@
                     <span class="playerDisplay1">0</span> to
                     <span class="playerDisplay2">0</span>
                 </h2>
-            <button class="resetBtn">Reset</button>
+            <button class="resetBtn">New Game</button>
         </div>
         <div class="mainContainer">
             <div class="playerContainer">
