@@ -33,13 +33,13 @@
                     </div>
                     <div class = "playerContainer2">
                         <input type="text" class="playerName2" id="playerName2" placeholder="AI" maxlength="10">
-                        <!-- <p class="playerName"> Player 2</p> -->
-                        <div class="opponentList">
-                            <select name='opponent' class="opponentSelect" onchange="setupGame.inputChange(this.value)">
-                                <option value="AI" class="others">AI</option>
-                                <option value="Player2" class="others">Human</option>
-                            </select>
-                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="opponentList">
+                        <select name='opponent' class="opponentSelect" onchange="setupGame.inputChange(this.value)">
+                            <option value="AI" class="others">AI</option>
+                            <option value="Player2" class="others">Human</option>
+                        </select>
                     </div>
                     <div class="playerImg1">
                         <div class="tokenSpot"></div>
@@ -48,7 +48,7 @@
                         <div class="tokenSpot"></div>
                     </div>
                     <div class="playTo">
-                        <p>Playing for Best of</p>
+                        <p class="bestOfMsg">Playing for Best of</p>
                         <select name='bestOf' class="bestOfOptions">
                             <option value="1" class="others">1</option>
                             <option value="3" class="others">3</option>
