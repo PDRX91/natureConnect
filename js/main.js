@@ -14,14 +14,13 @@ function initializeApp(){
     tokenExplosion = new TokenExplosion();
     tokenAnimation = new TokenAnimation();
     board = new Board();
+    focusPlayer1();
 }
 function clickHandler(){
     $('.bestOfOptions').change(function(){
         setupGame.getBestOf();
     });
-    $('.startBtn').on('click', function(){
-        setupGame.hideLandingAndProcessInputs();
-    });
+    
     $('.gameboard > div').click(processMove);
     $(".gameboard > div").hover((e) => tokenAnimation.checkShowFauxToken(e), (e) => tokenAnimation.toggleFauxToken(e, 'none'));
     $('.tokens>div').on('click', function(){
@@ -53,6 +52,9 @@ function processMove(){
     // player switching and win checking
     tokenAnimation.moveToken(placementRow, column, activePlayer.playerNumber, activePlayer.tokenNumber);
 }
+function focusPlayer1(){
+    $("#playerName1").focus();
+}
 
 class Player{
     constructor(name, playerNumber, tokenNumber){
@@ -73,9 +75,6 @@ function resultScreen(result) {
         $('.winMsg').append(winBox);
     }
     else {
-        // if(player1.name === 'AI' && player2.name === 'AI'){
-        //     var winBox = $("<div>").addClass('winBox').text(activePlayer.name + ' ' + activePlayer.playerNumber + ' wins this round!');
-        // } else {
         let winText;
         if (seriesLength === 1){
             winText = ' won the match!'

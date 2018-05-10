@@ -26,6 +26,7 @@ class SetupGame{
             this.token2 = parseInt(url.match(/\d+/)[0]);
 			$('.playerImg2').css('background-image', url);
 			$('.tokens>div').off();
+			this.showStart();
 		}
 		$(event.target).css('display', 'none');
 	}
@@ -70,5 +71,29 @@ class SetupGame{
 	}
 	backToHome(){
 		window.location.reload();
+	}
+	showStart(){
+
+		$(".token1, .token2, .token3, .token4").css('display', 'none');
+		let start = $("<button>").addClass('startBtn').text('Start!').on('click', function(){
+			console.log('starting');
+			setupGame.hideLandingAndProcessInputs();
+		});
+		let reselect = $("<button>").addClass('reselect').text('Reselect').on('click', function(){
+			console.log('resetting');
+			setupGame.resetTokens();
+		});
+		$(".tokens").append(start, reselect);
+	}
+	resetTokens(){
+		this.playerImg1= null;
+		this.playerImg2= null;
+		$(".playerImg1, .playerImg2").css('background-image', 'none');
+		$(".token1, .token2, .token3, .token4").css('display', 'block');
+		$(".startBtn, .reselect").remove();
+		$('.tokens>div').on('click', function(){
+			setupGame.setPlayerTokenImg();
+		});
+		
 	}
 }
