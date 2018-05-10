@@ -15,6 +15,7 @@ body {
     height: 100vh;
     background-image: url("../assets/scenery-pictures-3.jpg");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 h1{
@@ -42,11 +43,10 @@ h1{
 }
 
 .landingPlayer {
-    height: 45%;
     background-color: rgba(22,22,22,0.5);
     border-radius: 10px;
     margin-bottom: 2%;
-    /*padding: 1% 5%;*/
+    padding-bottom:1%;
 }
 
 ::placeholder {
@@ -122,6 +122,7 @@ div.playTo {
     height: 20%;
     display: block;
     margin: 5% auto;
+    text-align:center;
 }
 
 div.playTo > select {
