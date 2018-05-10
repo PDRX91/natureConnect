@@ -1,6 +1,5 @@
 html {
     font-size: 3vmin;
-    /*overflow: hidden;*/
 }
 
 html * {
@@ -27,6 +26,7 @@ h1{
     width: 100vmin;
     height: 100vh;
     margin: 0 auto;
+    min-height: 280px;
 }
 
 .landingHeader {
@@ -228,7 +228,7 @@ div.playTo > p {
     color: #eaefee;
     border-radius: 20%;
     background: rgba(75, 189, 271, .3);
-    font-size: 1rem;
+    font-size: 2rem;
     text-shadow: 2px 1px 0px #010c10;
 }
 
