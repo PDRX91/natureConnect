@@ -72,7 +72,6 @@ h1{
 }
 
 .playerImg1, .playerImg2 {
-    padding-top: 1vh;
     height: 40%;
     display: inline-block;
     background-size: contain;
@@ -92,8 +91,8 @@ h1{
     min-width: 90px;
     z-index: 49;
     margin: 0 auto;
-    border-left: 1px ridge #c8c8c8;
-    border-right: 2px ridge beige;
+    /*border-left: 1px ridge #c8c8c8;*/
+    /*border-right: 2px ridge beige;*/
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -214,7 +213,7 @@ div.playTo > p {
     cursor: pointer;
 }
 
-.tokens div:hover {
+#.tokens div:hover {
     -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
     -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
     box-shadow: 0px 0px 50px rgba(5,173,30,0.9);

@@ -78,7 +78,16 @@
     }
     
 }
-
+@media only screen and (max-width: 600px) {
+    .mainContainer {
+        margin-top: 15%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .mainContainer {
+        margin-top: 20%;
+    }
+}
 @media only screen and (max-width: 480px) {
 	html {
         font-size: 13px;
@@ -118,6 +127,9 @@
     .statsContainer > .resetBtn{
         top: 1%;
         left: 1%;
+    }
+    .mainContainer {
+        margin-top: 25%;
     }
 }
 
