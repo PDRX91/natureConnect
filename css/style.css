@@ -222,8 +222,8 @@ div.playTo > p {
 
 .startBtn {
     display: inline-block;
-    width: 15%;
     min-width: 70px;
+    padding: 0 .5%;
     height: 100%;
     color: #eaefee;
     border-radius: 20%;
