@@ -93,9 +93,7 @@ class Board {
         this.boardArray = [];
         this.createBoard();
         $('.gameboard > div').removeAttr('style');
-        if (activePlayer === player1) {
-            this.changePlayer();
-        }
+        this.changePlayer();
         $('div.gameContainer').removeClass('disableClicks');
         $('.winMsg').text('');
         activeWinner = false;
