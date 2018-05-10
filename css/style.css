@@ -44,7 +44,7 @@ h1{
 }
 
 .landingPlayer {
-    width: 80%;
+    width: 70%;
     height: 45%;
     min-height: 300px;
     margin: 0 auto;
@@ -194,18 +194,19 @@ div.playTo > p {
 }
 
 .tokens {
-    height: 35vh;
-    width: 35vh;
+    height: 30vh;
+    width: 30vh;
     margin: 0px auto;
-    display: flex;
+/*    display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    box-sizing: content-box;
+    box-sizing: content-box;*/
 }
 
 .tokens div {
-    height: 37%;
-    width: 37%;
+    display: inline-block;
+    height: 48%;
+    width: 48%;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -251,6 +252,7 @@ div.playTo > p {
     background: rgba(75, 189, 271, .3);
     font-size: 2rem;
     text-shadow: 2px 1px 0px #010c10;
+    margin-top: 20px;
 }
 
 .startBtn:hover, .resetBtn:hover, .homeBtn:hover {
