@@ -1,4 +1,8 @@
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
+
+    html {
+    font-size: 16px;
+}
     
     .landingPlayer p, .opponentSelect{
         font-size: 1.6rem;
@@ -45,12 +49,18 @@
 }
 
 @media only screen and (max-width: 480px) {
-	
+	html {
+        font-size: 13px;
+    }
+
     .landingPlayer{
         height:40%;
     }
+    .playerName2 {
+        margin-left: 8%;
+    }
     div.playTo{
-        margin: 7% auto;
+        margin: 5% auto;
     }
     .landingPlayer p, div.playTo p{
         font-size: 1.8rem;
@@ -77,5 +87,23 @@
     .statsContainer > .resetBtn{
         top: 1%;
         left: 1%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    html {
+        font-size: 10px;
+    }
+    div.playerImg1, div.playerImg2 {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    html {
+        font-size: 10px;
+    }
+    .playerName2 {
+        margin-left: 0%;
     }
 }
