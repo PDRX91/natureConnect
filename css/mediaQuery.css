@@ -1,16 +1,19 @@
 @media only screen and (min-width: 1200px) {
     .landingPlayer {
         width: 65%;
+        margin: 0 auto;
     }
 }
 @media only screen and (min-width: 1600px) {
     .landingPlayer {
         width: 60%;
+        margin: 0 auto;
     }
 }
 @media only screen and (min-width: 2100px) {
     .landingPlayer {
         width: 50%;
+        margin: 0 auto;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -20,6 +23,7 @@
     }
     .landingPlayer {
         width: 80%;
+        margin: 0 auto;
     }
     .landingPlayer p{
         font-size: 1.6rem;
@@ -95,6 +99,7 @@
 
     .landingPlayer{
         height:40%;
+        margin: 0 auto;
     }
     .playerName2 {
         margin-left: 8%;

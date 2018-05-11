@@ -19,7 +19,7 @@ body {
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .landingPage {
@@ -27,6 +27,11 @@ h1{
     height: 100vh;
     /*margin: 0 auto;*/
     min-height: 280px;
+}
+
+.landingPlayer > p {
+    margin: 3% auto;
+    text-align: center;
 }
 
 .landingHeader {
@@ -44,7 +49,7 @@ h1{
 }
 
 .landingPlayer {
-    height: 75%;
+    height: 90%;
     background-color: rgba(22,22,22,0.5);
     border-radius: 10px;
     margin-bottom: 2%;
@@ -66,6 +71,7 @@ h1{
     height: 20%;
     display: inline-block;
     /*margin-top: 1%;*/
+    margin-bottom: 5%;  
 }
 
 .playerImg1, .playerImg2 {
@@ -88,8 +94,8 @@ h1{
     min-width: 90px;
     z-index: 49;
     margin: 0 auto;
-    /*border-left: 1px ridge #c8c8c8;*/
-    /*border-right: 2px ridge beige;*/
+    border-left: 1px ridge #c8c8c8;
+    border-right: 2px ridge beige;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -123,11 +129,11 @@ h1{
     /*margin-left: 25%;*/
 }
 
-/*.playerName2 {
+.playerName2 {
     width: 50%;
-    margin-right: 1%;
-    margin-left: 15%;
-}*/
+    /* margin-right: 1%;
+    margin-left: 15%; */
+}
 
 #playerName2{
     pointer-events: none;
@@ -144,12 +150,13 @@ h1{
 }
 
 .bestOfOptions {
-/*    appearance: none;
-    -webkit-appearance: none;*/
-    padding: 1px 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 1px 12px;
     text-align: center;
     cursor: pointer;
     border-radius: 10px;
+
 }
 
 .bestOfMsg, .bestOfOptions {
@@ -169,6 +176,8 @@ h1{
     vertical-align: top;
 }
 .opponentSelect {
+    appearance: none;
+    -webkit-appearance: none;
     /*padding: 1px 15px;*/
     text-align: center;
     display: inline-block;
@@ -187,12 +196,13 @@ h1{
 div.playTo > p {
     /* padding-left:  15%;
     padding-right: 2%; */
+    display:inline-block;
 }
 
 .tokens {
     height: 35vh;
     width: 35vh;
-    margin: 3% auto;
+    margin: 8% auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
