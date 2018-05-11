@@ -1,6 +1,5 @@
 html {
-    font-size: 3vmin;
-    /*overflow: hidden;*/
+    font-size: 24px;
 }
 
 html * {
@@ -16,6 +15,7 @@ body {
     height: 100vh;
     background-image: url("../assets/scenery-pictures-3.jpg");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 h1{
@@ -23,30 +23,32 @@ h1{
 }
 
 .landingPage {
-    width: 100vmin;
+    /*width: 100vmin;*/
     height: 100vh;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    min-height: 280px;
 }
 
 .landingHeader {
     height:10%;
-    width:100%;
-    font-size: 2rem;
+    min-height: 85px;
+    /*width:100%;*/
+    /*font-size: 2rem;*/
     text-align:center;
     text-shadow: 3px 3px 0px #010c10;
 }
 
 .landingBody {
     height:90%;
-    width:100%;
+    /*width:100%;*/
 }
 
 .landingPlayer {
     height: 75%;
     background-color: rgba(22,22,22,0.5);
-    border-radius: 3%;
+    border-radius: 10px;
     margin-bottom: 2%;
-    padding: 1% 5%;
+    /*padding-bottom:1%;*/
 }
 
 ::placeholder {
@@ -54,66 +56,86 @@ h1{
 }
 
 .nameContainer{
-    width:80%;
-    margin:auto;
+    width: 100%;
+    /*margin: 1% auto;*/
     font-size: 0;
+    height: 15%;
 }
-.nameContainer > div {
-    width: 50%;
+.playerContainer1, .playerContainer2 {
+    /*width: 47%;*/
     height: 20%;
     display: inline-block;
-    margin-top: 1%;
+    /*margin-top: 1%;*/
 }
 
-div.player1Img, div.player2Img {
-    height: 60%;
+.playerImg1, .playerImg2 {
+    height: 40%;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.playerContainer1, .playerImg1, .playerContainer2, .playerImg2 {
+    width: 50%;
+    text-align: center;
 }
 
 .tokenSpot{
     border-radius: 50%;
-    height: 9vh;
-    width: 9vh;
+    height: 12vh;
+    width: 12vh;
+    min-height: 90px;
+    min-width: 90px;
     z-index: 49;
     margin: 0 auto;
-    border-left: 1px ridge #c8c8c8;
-    border-right: 2px ridge beige;
+    /*border-left: 1px ridge #c8c8c8;*/
+    /*border-right: 2px ridge beige;*/
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
-.landingPlayer p, .landingPlayer input, .landingPlayer button {
+.instructionMsg, .landingPlayer input, .landingPlayer button {
     font-size: 1.5rem;
     text-align: center;
     color: lightblue;
     text-shadow: 1px 1px 0px #010c10;
 }
+.instructionMsg{
+    height: 15%;
+}
 .playerNameContainer{
     width:100%;
 }
-.playerName {
+.playerName1, .playerName2 {
     font-size: 1.1rem;
-    margin-left: 23%;
-    margin-right: 1%;
+    /*margin-left: 25%;*/
     border: outset 3px white;
-    border-radius: 5%;
-    width: 50%;
+    border-radius: 10px;
+    /*width: 50%;*/
     color: white;
     display: inline-block;
     background-color: rgba(75, 189, 271, .3);
 }
 
+.playerName1, .playerName2 {
+    width: 50%;
+    /*margin-left: 25%;*/
+}
+
+/*.playerName2 {
+    width: 50%;
+    margin-right: 1%;
+    margin-left: 15%;
+}*/
+
 #playerName2{
     pointer-events: none;
 }
 
-.playerImg1, .playerImg2 {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
-div.playTo {
+
+.playTo {
     width: 100%;
     height: 8%;
     display: block;
@@ -121,55 +143,46 @@ div.playTo {
     text-align: center;
 }
 
-div.playTo > select {
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 1px 15px;
+.bestOfOptions {
+/*    appearance: none;
+    -webkit-appearance: none;*/
+    padding: 1px 5px;
     text-align: center;
-    cursor: pointer
+    cursor: pointer;
+    border-radius: 10px;
 }
 
-div.playTo > select, div.playTo > p {
+.bestOfMsg, .bestOfOptions {
     font-size: 1.5rem;
     display: inline-block;
-    margin: 1% 2%;
+    margin: 1%;
     color: #e80c0c;
 }
 
-div.playTo > p {
-    margin: auto;
-}
-
-/*span.playToNumber {
-    font-size: 1rem;
-}
-*/
-
-div.opponentList{
-    width: 20%;
-    height: 100%;
+.spacer, .opponentList{
+    height: 15%;
+    width: 50%;
     display: inline-block;
+    text-align: center;
 }
-.opponentSelect{
-    font-size: 1rem;
+.opponentList {
+    vertical-align: top;
 }
-div.opponentList > select {
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 1px 15px;
+.opponentSelect {
+    /*padding: 1px 15px;*/
     text-align: center;
     display: inline-block;
-    margin: 1% 2%;
+    /*margin: 0 0.2rem;*/
     color: #e80c0c;
     cursor: pointer;
-}
+    border-radius: 10px;
+    font-size: 1rem;
 
+}
 
 .others {
     color: brown;
 }
-
-
 
 div.playTo > p {
     /* padding-left:  15%;
@@ -183,12 +196,13 @@ div.playTo > p {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    box-sizing: content-box;
+    box-sizing: content-box;*/
 }
 
 .tokens div {
-    height: 37%;
-    width: 37%;
+    display: inline-block;
+    height: 48%;
+    width: 48%;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -196,7 +210,7 @@ div.playTo > p {
     cursor: pointer;
 }
 
-.tokens div:hover {
+#.tokens div:hover {
     -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
     -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
     box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
@@ -230,10 +244,11 @@ div.playTo > p {
     min-width: 70px;
     height: 30%;
     color: #eaefee;
-    border-radius: 20%;
+    border-radius: 10px;
     background: rgba(75, 189, 271, .3);
-    font-size: 1rem;
+    font-size: 2rem;
     text-shadow: 2px 1px 0px #010c10;
+    margin-top: 20px;
 }
 
 .startBtn:hover, .resetBtn:hover, .homeBtn:hover, .reselect:hover {
@@ -297,39 +312,28 @@ div.playTo > p {
     display:inline-block;
 }
 
-.playerContainer{
+/*.playerContainer{
     height: 10%;
     width: 100%;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
-}
+}*/
 
-.player1{
-    background-color: rgba(75, 189, 271, .4);
-    font-weight: bold;
-    font-size: 1rem;
-    padding-top: 2%;
-    padding-left: 2%;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.player2{
-    background-color: rgba(75, 189, 271, .4);
-    font-weight: bold;
-    font-size: 1rem;
-    padding-top: 2%;
-    padding-left: 2%;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 
 .player1, .player2{
     height:90%;
     width: 49%;
     display: inline-block;
     text-align:center;
+    border-radius: 10px;
+    background-color: rgba(75, 189, 271, .4);
+    font-weight: bold;
+    font-size: 1rem;
+    padding-top: 2%;
+    padding-left: 2%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .activePlayer{

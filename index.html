@@ -37,19 +37,21 @@
                 <p>Select your token to play!</p>
                 <div class="nameContainer">
 
-                    <div class="playerContainer">
-                        <input type="text" class="playerName" id="playerName1" placeholder="Player1" maxlength="10">
+
+                    <div class= "playerContainer1">
+                        <input type="text" class="playerName1" id="playerName1" placeholder="Player1" maxlength="10">
                         <!-- <p class="playerName"> Player 1</p> -->
                     </div>
-                    <div class="playerContainer">
-                        <input type="text" class="playerName" id="playerName2" placeholder="AI" maxlength="10">
-                        <!-- <p class="playerName"> Player 2</p> -->
-                        <div class="opponentList">
-                            <select name='opponent' class="opponentSelect" onchange="setupGame.inputChange(this.value)">
-                                <option value="AI" class="others">AI</option>
-                                <option value="Player2" class="others">Human</option>
-                            </select>
-                        </div>
+                    <div class = "playerContainer2">
+                        <input type="text" class="playerName2" id="playerName2" placeholder="AI" maxlength="10">
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="opponentList">
+                        <select name='opponent' class="opponentSelect" onchange="setupGame.inputChange(this.value)">
+                            <option value="AI" class="others">AI</option>
+                            <option value="Player2" class="others">Human</option>
+                        </select>
+
                     </div>
                     <div class="playerImg1">
                         <div class="tokenSpot"></div>
