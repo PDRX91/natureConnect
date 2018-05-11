@@ -27,10 +27,13 @@ function clickHandler(){
         setupGame.setPlayerTokenImg();
     });
     $('.resetBtn').on('click', function(){
-        board.resetBoard()
+        confirmReset();
     });
 }
-
+function confirmReset(){
+    
+    board.resetBoard()
+}
 function processMove(){
     var classes = $(event.currentTarget.firstElementChild).attr('class');
     var column = classes.charAt(6);
