@@ -52,11 +52,13 @@ h1{
 }
 
 .landingPlayer {
-    height: 90%;
+    /* height: 90%; */
     background-color: rgba(22,22,22,0.5);
     border-radius: 10px;
+    margin: 0 auto;
     margin-bottom: 2%;
-    /*padding-bottom:1%;*/
+    padding: 1.5%;
+    width:40%;
 }
 
 ::placeholder {
@@ -67,14 +69,14 @@ h1{
     width: 100%;
     /*margin: 1% auto;*/
     font-size: 0;
-    height: 15%;
+    /* height: 15%; */
 }
 .playerContainer1, .playerContainer2 {
     /*width: 47%;*/
     height: 20%;
     display: inline-block;
-    /*margin-top: 1%;*/
-    margin-bottom: 5%;  
+    /* margin-bottom: 5%;   */
+    margin-bottom: 0.5%;  
 }
 
 .playerImg1, .playerImg2 {
@@ -207,7 +209,7 @@ div.playTo > p {
 .tokens {
     height: 30vh;
     width: 30vh;
-    margin: 11% auto;
+    margin: 5% auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
