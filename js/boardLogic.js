@@ -74,30 +74,29 @@ class Board {
     disableColumn(column) {
         $('.column' + column).attr('class', 'disableClicks');
     }
-    changePlayer() {
-        if (this.playerTurn === 1) {
-            this.playerTurn = 2;
-            $(".tokenHoverContainer img").attr('src', 'assets/token' + player2.tokenNumber + '.png');
-            $(".player1").removeClass('activePlayer');
-            $(".player2").addClass('activePlayer');
-
-        } else {
+    changePlayer(reset = false) {
+        if (this.playerTurn === 2 || reset) {
             this.playerTurn = 1;
             $(".tokenHoverContainer img").attr('src', 'assets/token' + player1.tokenNumber + '.png');
             $(".player2").removeClass('activePlayer');
             $(".player1").addClass('activePlayer');
-
+            
+        } else{
+            this.playerTurn = 2;
+            $(".tokenHoverContainer img").attr('src', 'assets/token' + player2.tokenNumber + '.png');
+            $(".player1").removeClass('activePlayer');
+            $(".player2").addClass('activePlayer');
         }
     }
     resetBoard() {
         this.boardArray = [];
         this.createBoard();
-        $('.gameboard > div').removeAttr('style');
-        
-        this.changePlayer();
+        $('.tokenContainer > div').removeAttr('style');
         
         $('div.gameContainer').removeClass('disableClicks');
         $('.winMsg').text('');
         activeWinner = false;
+        this.changePlayer(true);        
+        
     }
 };
