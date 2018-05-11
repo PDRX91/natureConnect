@@ -53,6 +53,7 @@ class TokenAnimation{
                 else{
                     board.changePlayer();
                     if(player2.name === 'AI' && activePlayer.playerNumber === 1){
+                        console.log('ai is told to move');
                         moveAi();
                     }
                     else{
@@ -62,6 +63,7 @@ class TokenAnimation{
             });
     }
     checkShowFauxToken(){
+        console.log(this.stopHover);
         if(this.stopHover ==='no'){
             this.toggleFauxToken(event, 'inline-block');
         }
@@ -70,7 +72,7 @@ class TokenAnimation{
             $('.column' + column + ' img.faux').css('display','none');
     }
     toggleFauxToken(e, displayProperty){
-        let currentHoveredClass = $(e.target).attr('class');
+        let currentHoveredClass = $(e.currentTarget.firstElementChild).attr('class');
         let currentColumn = currentHoveredClass.substr(0,7);
         let hoverSelector = "." + currentColumn + " img.faux";
         $(hoverSelector).css('display', displayProperty);
