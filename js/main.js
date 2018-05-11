@@ -20,7 +20,6 @@ function clickHandler(){
     $('.bestOfOptions').change(function(){
         setupGame.getBestOf();
     });
-    
     $('.gameboard .tokenContainer').click(processMove);
     $(".gameboard .tokenContainer").hover((e) => tokenAnimation.checkShowFauxToken(e), (e) => tokenAnimation.toggleFauxToken(e, 'none'));
     $('.tokens>div').on('click', function(){
@@ -29,11 +28,25 @@ function clickHandler(){
     $('.resetBtn').on('click', function(){
         confirmReset();
     });
+    $('.yesBtn').on('click', function() {
+        processResetClick('yes')});
+    $('.noBtn').on('click', function() {
+        processResetClick('no')});
 }
+
 function confirmReset(){
-    
-    board.resetBoard()
+    $('.resetBtn').toggleClass('disabled');
+    $('.resetMessageContainer').css({display:'block'});  
 }
+
+function processResetClick(value){
+    $('.resetBtn').toggleClass('disabled');
+    $('.resetMessageContainer').css({display:'none'});
+    if(value === 'yes'){
+        board.resetBoard();
+    }
+}
+
 function processMove(){
     var classes = $(event.currentTarget.firstElementChild).attr('class');
     var column = classes.charAt(6);

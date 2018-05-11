@@ -46,7 +46,7 @@
         height:unset;
         position:unset;
     }
-    .statsContainer > .resetBtn, .statsContainer > .homeBtn{
+    .statsContainer > .resetContainer{
         width: 30%;
         height: 30%;
         font-size:2rem;
@@ -58,6 +58,7 @@
         font-size: 1.1em;
         width: unset;
         bottom: unset;
+        min-width: 18%;
     }
     .header{
         top:2.5%;
@@ -130,7 +131,10 @@
     .playerContainer{
         margin-bottom: 3%;
     }
-    
+    .statsContainer > .resetContainer{
+        left: 1%;
+        top: 1%;
+    }
 }
 
 @media only screen and (max-width: 360px) {

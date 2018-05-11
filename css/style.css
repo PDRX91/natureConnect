@@ -11,6 +11,12 @@ html * {
 }
 button, input, select{
     cursor: pointer;
+    padding: 1%;
+}
+button:hover {
+    -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
+    -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
+    box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
 }
 body {
     width: 100vw;
@@ -272,11 +278,7 @@ div.playTo > p {
     margin-top: 20px;
 }
 
-.startBtn:hover, .resetBtn:hover, .homeBtn:hover, .reselect:hover {
-    -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
-    -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
-    box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
-}
+
 
 .mainPage{
     width:100vmin;
@@ -301,7 +303,7 @@ div.playTo > p {
     font-size: 1rem;
     text-align: center;
     vertical-align: top;
-    padding-top: 2%;
+    padding: 1%;    
     position: relative;
 }
 
@@ -313,18 +315,43 @@ div.playTo > p {
     font-size: 2rem;
     margin-top: 5%;
 }
-
-.resetBtn, .homeBtn {
+.resetContainer{
+    position: absolute;
+    bottom: 30%;
     width: 80%;
+    min-height:15%;
+}
+.resetMessageContainer{
+    display:none;
+}
+button.disabled{
+    pointer-events:none;
+    background: rgba(0,0,0,0.2);
+}
+.yesBtn{
+    margin-right: 20%;
+}
+.confirmResetBtn{
+    color: #eaefee;
+    border-radius: 10px;
+    background: rgba(75, 189, 271, .3);
+    font-size: 1rem;
+    display: inline-block;
+    left: 2%;
+    text-shadow: 2px 1px 0px #010c10;
+    min-width: 30%;
+}
+.resetBtn, .homeBtn {
     /* height: 10%; */
+    width:100%;
     padding: 1%;
     color: #eaefee;
     border-radius: 10px;
     background: rgba(75, 189, 271, .3);
     font-size: 1rem;
     display: inline-block;
-    position: absolute;
-    bottom: 30%;
+    /* position: absolute;
+    bottom: 30%; */
     left: 2%;
     text-shadow: 2px 1px 0px #010c10;
 }
@@ -335,13 +362,9 @@ div.playTo > p {
     display:inline-block;
 }
 
-/*.playerContainer{
-    height: 10%;
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-}*/
+.playerContainer{
+    margin-bottom:1%;
+}
 
 
 .player1, .player2{
@@ -353,7 +376,7 @@ div.playTo > p {
     background-color: rgba(75, 189, 271, .4);
     font-weight: bold;
     font-size: 1rem;
-    padding-top: 2%;
+    padding: 1%;
     padding-left: 2%;
     background-repeat: no-repeat;
     background-size: contain;
