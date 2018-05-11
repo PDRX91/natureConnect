@@ -94,7 +94,7 @@ class SetupGame{
 		$(".token1, .token2, .token3, .token4").css('display', 'block');
 		$(".startBtn, .reselect").remove();
 		$('.tokens>div').on('click', function(){
-			this.setPlayerTokenImg();
+			setupGame.setPlayerTokenImg();
 		});
 		
 	}

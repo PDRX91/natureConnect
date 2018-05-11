@@ -21,7 +21,7 @@ body {
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .landingPage {
@@ -29,6 +29,12 @@ h1{
     height: 100vh;
     /*margin: 0 auto;*/
     min-height: 280px;
+}
+
+.landingPlayer > p {
+    margin: 3% auto;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .landingHeader {
@@ -46,7 +52,7 @@ h1{
 }
 
 .landingPlayer {
-    height: 75%;
+    height: 90%;
     background-color: rgba(22,22,22,0.5);
     border-radius: 10px;
     margin-bottom: 2%;
@@ -68,14 +74,16 @@ h1{
     height: 20%;
     display: inline-block;
     /*margin-top: 1%;*/
+    margin-bottom: 5%;  
 }
 
 .playerImg1, .playerImg2 {
-    height: 40%;
+    height: 12vh;
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-top: 4%;
 }
 .playerContainer1, .playerImg1, .playerContainer2, .playerImg2 {
     width: 50%;
@@ -84,14 +92,14 @@ h1{
 
 .tokenSpot{
     border-radius: 50%;
-    height: 12vh;
+    height: 100%;
     width: 12vh;
-    min-height: 90px;
-    min-width: 90px;
+    min-height: 50px;
+    min-width: 50px;
     z-index: 49;
-    margin: 0 auto;
-    /*border-left: 1px ridge #c8c8c8;*/
-    /*border-right: 2px ridge beige;*/
+    margin: 0px auto;
+    border-left: 1px ridge #c8c8c8;
+    border-right: 2px ridge beige;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -125,11 +133,11 @@ h1{
     /*margin-left: 25%;*/
 }
 
-/*.playerName2 {
+.playerName2 {
     width: 50%;
-    margin-right: 1%;
-    margin-left: 15%;
-}*/
+    /* margin-right: 1%;
+    margin-left: 15%; */
+}
 
 #playerName2{
     pointer-events: none;
@@ -146,11 +154,12 @@ h1{
 }
 
 .bestOfOptions {
-/*    appearance: none;
-    -webkit-appearance: none;*/
-    padding: 1px 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 1px 12px;
     text-align: center;
     border-radius: 10px;
+
 }
 
 .bestOfMsg, .bestOfOptions {
@@ -170,7 +179,10 @@ h1{
     vertical-align: top;
 }
 .opponentSelect {
+    appearance: none;
+    -webkit-appearance: none;
     /*padding: 1px 15px;*/
+    width: 20%;
     text-align: center;
     display: inline-block;
     /*margin: 0 0.2rem;*/
@@ -187,12 +199,14 @@ h1{
 div.playTo > p {
     /* padding-left:  15%;
     padding-right: 2%; */
+    display:inline-block;
+    font-size: 1.5rem;
 }
 
 .tokens {
-    height: 35vh;
-    width: 35vh;
-    margin: 3% auto;
+    height: 30vh;
+    width: 32vh;
+    margin: 11% auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
