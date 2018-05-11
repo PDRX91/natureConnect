@@ -21,8 +21,8 @@ function clickHandler(){
         setupGame.getBestOf();
     });
     
-    $('.gameboard > div').click(processMove);
-    $(".gameboard > div").hover((e) => tokenAnimation.checkShowFauxToken(e), (e) => tokenAnimation.toggleFauxToken(e, 'none'));
+    $('.gameboard .tokenContainer').click(processMove);
+    $(".gameboard .tokenContainer").hover((e) => tokenAnimation.checkShowFauxToken(e), (e) => tokenAnimation.toggleFauxToken(e, 'none'));
     $('.tokens>div').on('click', function(){
         setupGame.setPlayerTokenImg();
     });
@@ -32,7 +32,7 @@ function clickHandler(){
 }
 
 function processMove(){
-    var classes = $(this).attr('class');
+    var classes = $(event.currentTarget.firstElementChild).attr('class');
     var column = classes.charAt(6);
     var row = classes.charAt(11);
     var currentPlayer = board.playerTurn;

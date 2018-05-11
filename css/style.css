@@ -390,10 +390,15 @@ div.playTo > p {
     z-index: 50;
 }
 
-.gameboard > div{
-    border-radius: 50%;
+.tokenContainer{
     height: 16.3%;
-    width: 14.28%;
+    width: 14.28%; 
+    cursor:pointer; 
+}
+.tokenContainer > div{
+    border-radius: 50%;
+    height: 100%;
+    width:100%;
     z-index: 49;
     border-left: 1px ridge brown;
     border-right: 2px ridge beige;

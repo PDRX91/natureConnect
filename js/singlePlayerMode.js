@@ -11,7 +11,7 @@ function moveAi(){
     
     setTimeout(()=>{
         $('div.gameContainer').removeClass('disableClicks');
-        $('.column' + move + '.row5').click()}, 800);
+        $('.column' + move + '.row5').parent()[0].click()}, 800);
 }
 
 function checkForWinAndLoss(){

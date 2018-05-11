@@ -45,7 +45,7 @@ class SetupGame{
 		}
 	}
 	setAiToken(){
-		if(this.playerName2 === 'AI' && this.token1 === 2){
+		if(this.playerName2 === 'AI' && this.token1 === 2 && this.token2 === 2){
 			this.token2 = 1;
 		}
 	}
@@ -55,7 +55,9 @@ class SetupGame{
 		this.setName();
 		this.setAiToken();
 		player1 = new Player(this.playerName1, 1, this.token1);
-    	player2 = new Player(this.playerName2, 2, this.token2);
+		player2 = new Player(this.playerName2, 2, this.token2);
+		//manually start hover for first token
+		$(".tokenHoverContainer img").attr('src', 'assets/token' + this.token1 + '.png');
 	}
 	inputChange(currentVal){
 		if(currentVal === 'AI'){
@@ -92,7 +94,7 @@ class SetupGame{
 		$(".token1, .token2, .token3, .token4").css('display', 'block');
 		$(".startBtn, .reselect").remove();
 		$('.tokens>div').on('click', function(){
-			setupGame.setPlayerTokenImg();
+			this.setPlayerTokenImg();
 		});
 		
 	}
