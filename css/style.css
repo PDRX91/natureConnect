@@ -314,9 +314,8 @@ div.playTo > p {
 }
 .resetContainer{
     position: absolute;
-    bottom: 30%;
+    top: 55%;
     width: 80%;
-    min-height:15%;
 }
 .resetMessageContainer{
     display:none;
