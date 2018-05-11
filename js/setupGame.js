@@ -67,9 +67,7 @@ class SetupGame{
 		}
 	}
 	buttonChange(){
-		$(".resetBtn").hide();
-		let homeBtn = $("<button>").addClass('homeBtn').click(this.backToHome).text('Home');
-		$(".statsContainer").append(homeBtn);
+		$(".resetBtn").click(this.backToHome).text('Home');
 	}
 	backToHome(){
 		window.location.reload();

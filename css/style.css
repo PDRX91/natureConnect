@@ -191,11 +191,8 @@ h1{
 .opponentSelect {
     appearance: none;
     -webkit-appearance: none;
-    /*padding: 1px 15px;*/
-    width: 20%;
     text-align: center;
     display: inline-block;
-    /*margin: 0 0.2rem;*/
     color: #e80c0c;
     border-radius: 10px;
     font-size: 1rem;

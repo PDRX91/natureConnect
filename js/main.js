@@ -35,8 +35,10 @@ function clickHandler(){
 }
 
 function confirmReset(){
-    $('.resetBtn').toggleClass('disabled');
-    $('.resetMessageContainer').css({display:'block'});  
+    if($('.resetBtn').text() !== 'Home'){
+        $('.resetBtn').toggleClass('disabled');
+        $('.resetMessageContainer').css({display:'block'});  
+    }
 }
 
 function processResetClick(value){
