@@ -4,12 +4,36 @@ class Board {
         this.tie = 'true';
         this.playerTurn = 1
         this.boardArray = [];
+        this.columnMax = 7;
+        this.rowMax = 6;
         this.createBoard();
+        this.boardDomCreation(this.rowMax, this.columnMax);
+    }
+
+    boardDomCreation(rowIndex, columnIndex){
+        let tokenHoverContainer = $('.tokenHoverContainer');
+        let fauxArr = [];
+        let gameBoard = $('.gameboard');
+        let gameArr = [];
+        for (let column = 0; column < columnIndex; column++) {
+            let fauxColumn = $('<div>').addClass('column'+column);
+            let fauxImg = $('<img>').addClass('faux');
+            fauxColumn.append(fauxImg);
+            fauxArr.push(fauxColumn);
+            for (let row = 0; row < rowIndex; row++) {
+                let tokenContainer = $('<div>').addClass('tokenContainer');
+                let cell = $('<div>').addClass(`column${column} row${row}`);
+                tokenContainer.append(cell);
+                gameArr.push(tokenContainer);
+            }
+        }
+        tokenHoverContainer.append(fauxArr);
+        gameBoard.append(gameArr);
     }
     createBoard() {
-        for (var row = 0; row < 6; row++) {
+        for (var row = 0; row < this.rowMax; row++) {
             var eachRow = [];
-            for (var column = 0; column < 7; column++) {
+            for (var column = 0; column < this.columnMax; column++) {
                 eachRow.push(0);
             }
             this.boardArray.unshift(eachRow);
@@ -38,8 +62,8 @@ class Board {
         let downwardDiagonal = tokenRow - tokenColumn;
         this.tie = true;
 
-        for (var row = 0; row < 6; row++) {
-            for (var column = 0; column < 7; column++) {
+        for (var row = 0; row < this.rowMax; row++) {
+            for (var column = 0; column < this.columnMax; column++) {
                 //add to upward diagonal
                 if (row + column === upwardDiagonal) {
                     diagStringUpward += this.boardArray[row][column];
