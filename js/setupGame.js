@@ -76,11 +76,9 @@ class SetupGame{
 
 		$(".token1, .token2, .token3, .token4").css('display', 'none');
 		let start = $("<button>").addClass('startBtn').text('Start!').on('click', function(){
-			console.log('starting');
 			setupGame.hideLandingAndProcessInputs();
 		});
 		let reselect = $("<button>").addClass('reselect').text('Reselect').on('click', function(){
-			console.log('resetting');
 			setupGame.resetTokens();
 		});
 		$(".tokens").append(start, reselect);

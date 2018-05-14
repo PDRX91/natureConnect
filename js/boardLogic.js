@@ -96,7 +96,7 @@ class Board {
         }
     }
     disableColumn(column) {
-        $('.column' + column).addClass('disableClicks');
+        $('.column' + column).parent().addClass('disableClicks');
     }
     changePlayer(reset = false) {
         if (this.playerTurn === 2 || reset) {

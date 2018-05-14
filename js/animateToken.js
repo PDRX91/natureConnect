@@ -52,7 +52,6 @@ class TokenAnimation{
                 else{
                     board.changePlayer();
                     if(player2.name === 'AI' && activePlayer.playerNumber === 1){
-                        console.log('ai is told to move');
                         moveAi();
                     }
                     else{
@@ -62,7 +61,6 @@ class TokenAnimation{
             });
     }
     checkShowFauxToken(){
-        console.log(this.stopHover);
         if(this.stopHover ==='no'){
             this.toggleFauxToken(event, 'inline-block');
         }
