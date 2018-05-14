@@ -4,12 +4,36 @@ class Board {
         this.tie = 'true';
         this.playerTurn = 1
         this.boardArray = [];
+        this.columnMax = 7;
+        this.rowMax = 6;
+        this.boardDomCreation(this.rowMax, this.columnMax);
         this.createBoard();
     }
+
+    boardDomCreation(rowIndex, columnIndex){
+        let tokenHoverContainer = $('.tokenHoverContainer');
+        let fauxArr = [];
+        let gameBoard = $('.gameboard');
+        let gameArr = [];
+        for (let column = 0; column < columnIndex; column++) {
+            let fauxColumn = $('<div>').addClass('column'+column);
+            let fauxImg = $('<img>').addClass('faux');
+            fauxColumn.append(fauxImg);
+            fauxArr.push(fauxColumn);
+            for (let row = 0; row < rowIndex; row++) {
+                let tokenContainer = $('<div>').addClass('tokenContainer');
+                let cell = $('<div>').addClass(`column${column} row${row}`);
+                tokenContainer.append(cell);
+                gameArr.push(tokenContainer);
+            }
+        }
+        tokenHoverContainer.append(fauxArr);
+        gameBoard.append(gameArr);
+    }
     createBoard() {
-        for (var row = 0; row < 6; row++) {
+        for (var row = 0; row < this.rowIndex; row++) {
             var eachRow = [];
-            for (var column = 0; column < 7; column++) {
+            for (var column = 0; column < this.columnIndex; column++) {
                 eachRow.push(0);
             }
             this.boardArray.unshift(eachRow);

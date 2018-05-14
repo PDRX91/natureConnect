@@ -9,12 +9,15 @@ let tokenExplosion = null;
 let tokenAnimation = null;
 let board = null;
 function initializeApp(){
-    setupGame = new SetupGame();
-    clickHandler();
-    tokenExplosion = new TokenExplosion();
-    tokenAnimation = new TokenAnimation();
     board = new Board();
-    focusPlayer1();
+    // setTimeout(() => {
+        setupGame = new SetupGame();
+        clickHandler();
+        tokenExplosion = new TokenExplosion();
+        tokenAnimation = new TokenAnimation();
+        focusPlayer1();
+    // }, 1000);
+
 }
 function clickHandler(){
     $('.bestOfOptions').change(function(){
