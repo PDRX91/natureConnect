@@ -6,8 +6,8 @@ class Board {
         this.boardArray = [];
         this.columnMax = 7;
         this.rowMax = 6;
-        this.boardDomCreation(this.rowMax, this.columnMax);
         this.createBoard();
+        this.boardDomCreation(this.rowMax, this.columnMax);
     }
 
     boardDomCreation(rowIndex, columnIndex){
@@ -31,9 +31,9 @@ class Board {
         gameBoard.append(gameArr);
     }
     createBoard() {
-        for (var row = 0; row < this.rowIndex; row++) {
+        for (var row = 0; row < this.rowMax; row++) {
             var eachRow = [];
-            for (var column = 0; column < this.columnIndex; column++) {
+            for (var column = 0; column < this.columnMax; column++) {
                 eachRow.push(0);
             }
             this.boardArray.unshift(eachRow);
@@ -62,8 +62,8 @@ class Board {
         let downwardDiagonal = tokenRow - tokenColumn;
         this.tie = true;
 
-        for (var row = 0; row < 6; row++) {
-            for (var column = 0; column < 7; column++) {
+        for (var row = 0; row < this.rowMax; row++) {
+            for (var column = 0; column < this.columnMax; column++) {
                 //add to upward diagonal
                 if (row + column === upwardDiagonal) {
                     diagStringUpward += this.boardArray[row][column];

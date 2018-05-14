@@ -8,17 +8,16 @@ let setupGame = null;
 let tokenExplosion = null;
 let tokenAnimation = null;
 let board = null;
+
 function initializeApp(){
     board = new Board();
-    // setTimeout(() => {
-        setupGame = new SetupGame();
-        clickHandler();
-        tokenExplosion = new TokenExplosion();
-        tokenAnimation = new TokenAnimation();
-        focusPlayer1();
-    // }, 1000);
-
+    setupGame = new SetupGame();
+    clickHandler();
+    tokenExplosion = new TokenExplosion();
+    tokenAnimation = new TokenAnimation();
+    focusPlayer1();
 }
+
 function clickHandler(){
     $('.bestOfOptions').change(function(){
         setupGame.getBestOf();
@@ -134,9 +133,6 @@ function resultScreen(result) {
             }
 
         }
-        // var winBox = $("<div>").addClass('winBox').text(activePlayer.name + winText);
-        
-        // }
         $('.winMsg').append(winBox);
     }
 }
