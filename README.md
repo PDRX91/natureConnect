@@ -8,11 +8,11 @@ Nature Connect is a web application take on the classic connect four game!
 
 ## Motivation
 
-This project was built for a hackathon and grew out of our desire to expand our javascript skills while making a simple game with a clear Nature theme.
+This project was built for a 2-day hackathon and grew out of our desire to expand our javascript skills while making a simple game with a clear Nature theme.
 
 ## Usage
 
-To add more depth to our connect 4 game after adding the multiplayer mode we programmed a simple AI to enable single player play. Single player mode is the default, and prospective players only need to select their token choices before clicking the start button!
+To add more depth to our connect 4 game we programmed a simple AI to enable single player play. Single player mode is the default, and prospective players only need to select their token choices before clicking the start button!
 
 ## Project
 
