@@ -1,45 +1,42 @@
-# C1.18_connectathon
+<p align='center'>
+<img src = "./assets/NatureConnect_ReadMe.PNG" style="width:400px;border-radius:3%;border:outset black 4px">
+</p>
 
-Scope: 
-- Make a connect 4 game
-  - basic rule description: https://en.wikipedia.org/wiki/Connect_Four#Gameplay
-  - at least 2 players
-  - at least 7x6 board size
-  - players alternate in some way or form
-- Additional requirements:
-  - must be able to pick any height of a column and have the chip placed at the right height
-  - players must be able to choose which symbol they use for their chips
-  - dropping must animate
- 
- 
-Mystery requirement: 
-- <b>COMING SOON!</b>
+# Nature Connect
 
-### Teams
+Nature Connect is a web application take on the classic connect four game!
 
-#### Team 1
-- Li Zhang
-- Brian Morris
-- Parker Rebensdorf
+## Motivation
 
-#### Team 2
-- Ryan Soto
-- Duy Nguyen
-- Jean Paul Olukemi
+This project was built for a hackathon and grew out of our desire to expand our javascript skills while making a simple game with a clear Nature theme.
 
-#### Team 3
-- Harrison Truong
-- Nolan Emerson
-- David Forman
-- Sasha Ross
+## Usage
 
-#### Team 4
-- William Cheng
-- Hanran Kim
-- Jeffrei Cher
-- Matthew Kane
+To add more depth to our connect 4 game after adding the multiplayer mode we programmed a simple AI to enable single player play. Single player mode is the default, and prospective players only need to select their token choices before clicking the start button!
 
-#### Team 5
-- Keaton Kreiger
-- Alejandro Gaspar
-- Evan Ippolito
+## Project
+
+View this project live [HERE](natureconnect.briantmorris.com/)
+
+## Features
+
+- [x] Single And Multiplayer Modes
+- [x] Single Player Ai
+- [x] Design made for Desktop and Mobile use
+
+
+## Technologies Used
+
+- [JavaScript](https://www.javascript.com/)
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+- [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
+- [Jquery](https://jquery.com/)
+
+## Contributors
+
+[Briantmorr](https://github.com/Briantmorr) |
+[bylizhang](https://github.com/bylizhang) |
+[pdrx91](https://github.com/pdrx91) |
+
+## License
+This project is licensed under the MIT License © [Brian Morris](briantmorris.com)
