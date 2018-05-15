@@ -218,6 +218,7 @@ div.playTo > p {
     min-width: 150px;
     margin: 5% auto;
     display: flex;
+    align-items: center;
     flex-flow: row wrap;
     justify-content: space-around;
     box-sizing: content-box;
