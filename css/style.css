@@ -14,9 +14,9 @@ button, input, select{
     padding: 1%;
 }
 button:hover {
-    -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
-    -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
-    box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
+    -webkit-box-shadow:  0px 0px 25px rgb(212, 237, 216);
+    -moz-box-shadow:  0px 0px 25px rgb(212, 237, 216);
+    box-shadow: 0px 0px 25px rgb(212, 237, 216);
 }
 body {
     width: 100vw;
@@ -242,7 +242,7 @@ div.playTo > p {
 .token1:hover, .token2:hover, .token3:hover, .token4:hover{
     height: 50%;
     width: 50%;
-    box-shadow: 4px 2px 4px rgb(0,0,0);
+    /* box-shadow: 4px 2px 4px rgb(0,0,0); */
     z-index: 1;
 }
 
