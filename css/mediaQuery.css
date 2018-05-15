@@ -91,6 +91,7 @@
     .playerImg1, .playerImg2, .tokenSpot {
         min-height: 50px;
         min-width: 50px;
+    }
 }
 
 
@@ -152,5 +153,20 @@
     }
     .playerName2 {
         margin-left: 0%;
+    }
+}
+
+@media only screen and (min-width: 760px) {
+    .tokens{
+        flex-flow: row;
+        height: 26vh;
+        width: 50vh;
+    }
+    .landingPlayer{
+        height: 90%;
+        overflow:hidden;
+    }
+    .landingPage{
+        overflow:hidden;
     }
 }

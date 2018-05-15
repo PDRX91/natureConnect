@@ -225,8 +225,8 @@ div.playTo > p {
 
 .tokens div {
     display: inline-block;
-    height: 48%;
-    width: 48%;
+    height: 45%;
+    width: 45%;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -234,10 +234,16 @@ div.playTo > p {
     cursor: pointer;
 }
 
-.tokens div:hover {
+/* .tokens div:hover {
     -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
     -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
     box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
+} */
+.token1:hover, .token2:hover, .token3:hover, .token4:hover{
+    height: 50%;
+    width: 50%;
+    box-shadow: 4px 2px 4px rgb(0,0,0);
+    z-index: 1;
 }
 
 .token1 {
