@@ -19,7 +19,7 @@ button:hover {
     box-shadow: 0px 0px 25px rgb(212, 237, 216);
 }
 body {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     background-image: url("../assets/scenery-pictures-3.jpg");
     background-size: cover;
@@ -285,10 +285,10 @@ div.playTo > p {
 
 
 .mainPage{
-    width:100vmin;
-    height:100vmin;
-    min-height: 800px;
-    min-width: 800px;
+    width:97vmin;
+    height:97vmin;
+    min-height: 650px;
+    min-width: 650px;
     margin: 0 auto;
     font-size: 0;
     text-shadow: 2px 3px 0px #010c10;
@@ -302,7 +302,7 @@ div.playTo > p {
 
 .statsContainer{
     width: 20%;
-    height: 90%;
+    height: calc(100% - 3.09rem);
     display: inline-block;
     font-size: 1rem;
     text-align: center;
@@ -361,7 +361,7 @@ button.disabled{
 
 .mainContainer{
     width:80%;
-    height: 90%;
+    height: calc(100% - 3.09rem);
     display:inline-block;
 }
 
