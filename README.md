@@ -34,7 +34,7 @@ View this project live [HERE](parkerrebensdorf.com/natureConnect/)
 
 ## Contributors
 
-[pdrx91](https://github.com/pdrx91) |
+[PDRX91](https://github.com/PDRX91) |
 [Briantmorr](https://github.com/Briantmorr) |
 [bylizhang](https://github.com/bylizhang) 
 
