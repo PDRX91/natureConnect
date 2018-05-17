@@ -116,7 +116,7 @@ h1{
 }
 
 .instructionMsg, .landingPlayer input, .landingPlayer button {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
     color: lightblue;
     text-shadow: 1px 1px 0px #010c10;
@@ -271,15 +271,16 @@ div.playTo > p {
 
 .startBtn, .reselect {
     display: inline-block;
-    min-width: 70%;
+    min-width: 50%;
     height: 30%;
-    padding:1%;
+    margin: 1%;
+    padding: 1%;
     color: #eaefee;
     border-radius: 10px;
     background: rgba(75, 189, 271, .3);
     font-size: 2rem;
     text-shadow: 2px 1px 0px #010c10;
-    margin-top: 20px;
+    margin: 20px 2px 0 2px;
 }
 
 
@@ -458,8 +459,11 @@ button.disabled{
 
 .winMsg {
     display: none;
+    /* font-size: 18px; */
     height: 10%;
     width: 100%;
+    min-height: 45px;
+    white-space: nowrap;
     /* margin: 0 auto; */
     position: absolute;
     /* right: -28%; */
