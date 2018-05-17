@@ -271,7 +271,7 @@ div.playTo > p {
 
 .startBtn, .reselect {
     display: inline-block;
-    min-width: 70%;
+    min-width: 50%;
     height: 30%;
     padding:1%;
     color: #eaefee;
@@ -279,7 +279,7 @@ div.playTo > p {
     background: rgba(75, 189, 271, .3);
     font-size: 2rem;
     text-shadow: 2px 1px 0px #010c10;
-    margin-top: 20px;
+    margin: 20px 2px 0 2px;
 }
 
 
