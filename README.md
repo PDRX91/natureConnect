@@ -16,7 +16,7 @@ To add more depth to our connect 4 game we programmed a simple AI to enable sing
 
 ## Project
 
-View this project live [HERE](natureconnect.briantmorris.com/)
+View this project live [HERE](parkerrebensdorf.com/natureConnect/)
 
 ## Features
 
@@ -34,9 +34,10 @@ View this project live [HERE](natureconnect.briantmorris.com/)
 
 ## Contributors
 
-[Briantmorr](https://github.com/Briantmorr) |
-[bylizhang](https://github.com/bylizhang) |
 [pdrx91](https://github.com/pdrx91) |
+[Briantmorr](https://github.com/Briantmorr) |
+[bylizhang](https://github.com/bylizhang) 
+
 
 ## License
-This project is licensed under the MIT License © [Brian Morris](briantmorris.com)
+This project is licensed under the MIT License © [Parker Rebensdorf](parkerrebensdorf.com)
